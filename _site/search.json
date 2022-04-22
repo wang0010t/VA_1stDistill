@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "This website consists of collection of works done for courses I took during MITB journey.",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-04-22T17:46:02+08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "My 1st Distill Website",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-04-22T17:44:48+08:00"
+    }
+  ],
+  "collections": []
+}

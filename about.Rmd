@@ -1,0 +1,10 @@
+---
+title: "About this site"
+description: |
+  This website consists of collection of works done for courses I took during MITB journey.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+

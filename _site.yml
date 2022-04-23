@@ -1,7 +1,7 @@
-name: "VA_1stDistill"
-title: "My 1st Distill Website"
+name: "VA_WTQ"
+title: "ISSS608 VA - Wang Tianqi"
 description: |
-  My 1st Distill Website
+  ISSS608 Visual Analytics and Applications - Wang Tianqi
 output_dir: "_site"
 navbar:
   right:
@@ -13,8 +13,19 @@ navbar:
     - text: "DataViz Makeover"
       menu:
       - text: "DataViz Makeover 1"
-        href: "DataViz1"
+        href: "DataViz1.html"
       - text: "DataViz Makeover 2"
-        href: "DataViz2"
+        href: "DataViz2.html"
     - text: "Take-home Exercise"
+      menu:
+      - text: "Take-home Exercise 1"
+        href: "TakeHome1.html"
+      - text: "Take-home Exercise 2"
+        href: "TakeHome2.html"
+      - text: "Take-home Exercise 3"
+        href: "TakeHome3.html"
+      - text: "Take-home Exercise 4"
+        href: "TakeHome4.html"
+      - text: "Take-home Exercise 5"
+        href: "TakeHome5.html"
 output: distill::distill_article

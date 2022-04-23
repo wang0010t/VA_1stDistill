@@ -1,5 +1,5 @@
 ---
-title: "My 1st Distill Website"
+title: "ISSS608 Visual Analytics and Applications - Wang Tianqi"
 description: |
   Welcome to the website. I hope you enjoy it!
 site: distill::distill_website

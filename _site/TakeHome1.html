@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>ISSS608 VA - Wang Tianqi: Take-home Exercise 1</title>
+
+  <meta property="description" itemprop="description" content="Demographic of the city of Engagement, Ohio USA"/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-04-23"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-04-23"/>
+  <meta name="article:author" content="Wang Tianqi &lt;br&gt;"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="ISSS608 VA - Wang Tianqi: Take-home Exercise 1"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Demographic of the city of Engagement, Ohio USA"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="ISSS608 VA - Wang Tianqi"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="ISSS608 VA - Wang Tianqi: Take-home Exercise 1"/>
+  <meta property="twitter:description" content="Demographic of the city of Engagement, Ohio USA"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Take-home Exercise 1"]},{"type":"character","attributes":{},"value":["Demographic of the city of Engagement, Ohio USA\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Wang Tianqi <br>"]}]}]},{"type":"character","attributes":{},"value":["2022-04-23"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+  <script type="application/javascript">
+
+  function getMeta(metaName) {
+    var metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute('name') === metaName) {
+        return metas[i].getAttribute('content');
+      }
+    }
+    return '';
+  }
+
+  function offsetURL(url) {
+    var offset = getMeta('distill:offset');
+    return offset ? offset + '/' + url : url;
+  }
+
+  function createFuseIndex() {
+
+    // create fuse index
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
+    var fuse = new window.Fuse([], options);
+
+    // fetch the main search.json
+    return fetch(offsetURL('search.json'))
+      .then(function(response) {
+        if (response.status == 200) {
+          return response.json().then(function(json) {
+            // index main articles
+            json.articles.forEach(function(article) {
+              fuse.add(article);
+            });
+            // download collections and index their articles
+            return Promise.all(json.collections.map(function(collection) {
+              return fetch(offsetURL(collection)).then(function(response) {
+                if (response.status === 200) {
+                  return response.json().then(function(articles) {
+                    articles.forEach(function(article) {
+                      fuse.add(article);
+                    });
+                  })
+                } else {
+                  return Promise.reject(
+                    new Error('Unexpected status from search index request: ' +
+                              response.status)
+                  );
+                }
+              });
+            })).then(function() {
+              return fuse;
+            });
+          });
+
+        } else {
+          return Promise.reject(
+            new Error('Unexpected status from search index request: ' +
+                        response.status)
+          );
+        }
+      });
+  }
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // get search element (bail if we don't have one)
+    var searchEl = window.document.getElementById('distill-search');
+    if (!searchEl)
+      return;
+
+    createFuseIndex()
+      .then(function(fuse) {
+
+        // make search box visible
+        searchEl.classList.remove('hidden');
+
+        // initialize autocomplete
+        var options = {
+          autoselect: true,
+          hint: false,
+          minLength: 2,
+        };
+        window.autocomplete(searchEl, options, [{
+          source: function(query, callback) {
+            const searchOptions = {
+              isCaseSensitive: false,
+              shouldSort: true,
+              minMatchCharLength: 2,
+              limit: 10,
+            };
+            var results = fuse.search(query, searchOptions);
+            callback(results
+              .map(function(result) { return result.item; })
+            );
+          },
+          templates: {
+            suggestion: function(suggestion) {
+              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                : '';
+              var html = `
+                <div class="search-item">
+                  <h3>${suggestion.title}</h3>
+                  <div class="search-item-description">
+                    ${suggestion.description || ''}
+                  </div>
+                  <div class="search-item-preview">
+                    ${img}
+                  </div>
+                </div>
+              `;
+              return html;
+            }
+          }
+        }]).on('autocomplete:selected', function(event, suggestion) {
+          window.location.href = offsetURL(suggestion.path);
+        });
+        // remove inline display style on autocompleter (we want to
+        // manage responsive display via css)
+        $('.algolia-autocomplete').css("display", "");
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+  });
+
+  </script>
+
+  <style type="text/css">
+
+  .nav-search {
+    font-size: x-small;
+  }
+
+  /* Algolioa Autocomplete */
+
+  .algolia-autocomplete {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: sub;
+    background-color: white;
+    color: black;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    border: 1px #0F2E3D solid;
+    width: 180px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-nav .algolia-autocomplete {
+      display: none;
+      visibility: hidden;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete {
+      display: inline-block;
+      visibility: visible;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+      margin-left: 0;
+      width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 90%;
+    outline: none;
+    border: none;
+  }
+
+  .algolia-autocomplete .aa-hint {
+    color: #999;
+  }
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 550px;
+    max-height: 70vh;
+    overflow-x: visible;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-top: 3px;
+    margin-left: -150px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #999;
+    border-top: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    cursor: pointer;
+    padding: 5px 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+    overflow: hidden;
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+    font-size: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 5px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+    display: inline-block;
+    overflow: hidden;
+    height: 2.8em;
+    width: 80%;
+    margin-right: 4%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+    display: inline-block;
+    width: 15%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+    height: 3em;
+    width: auto;
+    display: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+    display: initial;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #eee;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  </style>
+
+
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+  <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Take-home Exercise 1","description":"Demographic of the city of Engagement, Ohio USA","authors":[{"author":"Wang Tianqi <br>","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-04-23T00:00:00.000+08:00","citationText":"<br>, 2022"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">ISSS608 VA - Wang Tianqi</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+DataViz Makeover
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="DataViz1.html">DataViz Makeover 1</a>
+<a href="DataViz2.html">DataViz Makeover 2</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Take-home Exercise
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="TakeHome1.html">Take-home Exercise 1</a>
+<a href="TakeHome2.html">Take-home Exercise 2</a>
+<a href="TakeHome3.html">Take-home Exercise 3</a>
+<a href="TakeHome4.html">Take-home Exercise 4</a>
+<a href="TakeHome5.html">Take-home Exercise 5</a>
+</div>
+</div>
+</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Take-home Exercise 1</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>Demographic of the city of Engagement, Ohio USA</p></p>
+</div>
+
+<div class="d-byline">
+  Wang Tianqi <br>  
+  
+<br/>2022-04-23
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#overview">1. Overview</a>
+<ul>
+<li><a href="#the-task">1.1 The Task</a></li>
+</ul></li>
+<li><a href="#getting-started">2. Getting started</a>
+<ul>
+<li><a href="#installing-and-loading-the-required-libraries">2.1
+Installing and loading the required libraries</a></li>
+</ul></li>
+<li><a href="#data-import">3. Data Import</a>
+<ul>
+<li><a href="#import-participants.csv">3.1 Import
+<em>Participants.csv</em></a></li>
+</ul></li>
+<li><a href="#data-wrangling">4. Data Wrangling</a>
+<ul>
+<li><a
+href="#compute-the-frequency-count-of-participants-sort-the-data">4.1
+Compute the frequency count of participants &amp; Sort the data</a>
+<ul>
+<li><a href="#the-group-by-method">The <em>group-by</em> method</a></li>
+<li><a href="#the-count-method">The <em>count</em> method</a></li>
+</ul></li>
+<li><a href="#convert-age-values-to-age-groups">4.2 Convert age values
+to age groups</a></li>
+<li><a href="#compute-the-cumulative-frequency">4.3 Compute the
+cumulative frequency</a></li>
+</ul></li>
+<li><a href="#data-visualization">5. Data Visualization</a>
+<ul>
+<li><a href="#create-the-pareto-chart">5.1 Create the Pareto Chart</a>
+<ul>
+<li><a href="#insights-from-visualization">Insights from
+visualization</a></li>
+</ul></li>
+<li><a href="#create-the-household-distribution-pyramid">5.2 Create the
+Household Distribution Pyramid</a>
+<ul>
+<li><a href="#insights-from-visualization-1">Insights from
+visualization</a></li>
+</ul></li>
+<li><a href="#create-boxplot">5.3 Create Boxplot</a>
+<ul>
+<li><a href="#insights-from-visualization-2">Insights from
+visualization</a></li>
+</ul></li>
+<li><a href="#create-split-violin-plot">5.4 Create split violin plot</a>
+<ul>
+<li><a href="#insights-from-visualization-3">Insights from
+visualization</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h1 id="overview">1. Overview</h1>
+<p>Take-home Exercise #1: To reveal the demographic of the city of
+Engagement, Ohio USA.</p>
+<h2 id="the-task">1.1 The Task</h2>
+<p>In this exercise, we are going to reveal the demographic of the city
+of Engagement, Ohio USA by using appropriate static statistical graphics
+methods. The data should be processed by using appropriate
+<strong>tidyverse</strong> family of packages and the statistical
+graphics should be prepared using <strong>ggplot2</strong> and its
+extensions.</p>
+<h1 id="getting-started">2. Getting started</h1>
+<h2 id="installing-and-loading-the-required-libraries">2.1 Installing
+and loading the required libraries</h2>
+<p>Before we get started, it is important for us to ensure that the
+required R packages have been installed. For the purpose of the
+exercise, the <strong>tidyverse</strong> packages will be mainly
+used.</p>
+<p>The code chunk below is used to check if the necessary R packages are
+installed in R. If they have yet, then RStudio will install the missing
+R package(s). If are already been installed, then they will be loaded in
+R environment.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>packages</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'tidyverse'</span>, <span class='st'>'ggdist'</span>, <span class='st'>'gghalves'</span>, <span class='st'>'ggridges'</span>, <span class='st'>'readxl'</span>, <span class='st'>'knitr'</span>, <span class='st'>'ggrepel'</span>, <span class='st'>'rmarkdown'</span>, <span class='st'>'plotly'</span><span class='op'>)</span>
+<span class='kw'>for</span><span class='op'>(</span><span class='va'>p</span> <span class='kw'>in</span> <span class='va'>packages</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='kw'>if</span><span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='va'>p</span>, character.only <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='va'>p</span><span class='op'>)</span>
+  <span class='op'>}</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>p</span>, character.only <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<h1 id="data-import">3. Data Import</h1>
+<h2 id="import-participants.csv">3.1 Import
+<em>Participants.csv</em></h2>
+<p>In this exercise, <em>Participants.csv</em> csv data file in the
+<em>Attributes</em> folder will be used.</p>
+<p>The code chunk below imports <em>Participants.csv</em> into R
+environment by using <em>read_csv()</em> function.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>participants_data</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/Participants.csv"</span><span class='op'>)</span>
+
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>participants_data</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["participantId"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["householdSize"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["haveKids"],"name":[3],"type":["lgl"],"align":["right"]},{"label":["age"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["educationLevel"],"name":[5],"type":["chr"],"align":["left"]},{"label":["interestGroup"],"name":[6],"type":["chr"],"align":["left"]},{"label":["joviality"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"0","2":"3","3":"TRUE","4":"36","5":"HighSchoolOrCollege","6":"H","7":"0.001626703"},{"1":"1","2":"3","3":"TRUE","4":"25","5":"HighSchoolOrCollege","6":"B","7":"0.328086500"},{"1":"2","2":"3","3":"TRUE","4":"35","5":"HighSchoolOrCollege","6":"A","7":"0.393469590"},{"1":"3","2":"3","3":"TRUE","4":"21","5":"HighSchoolOrCollege","6":"I","7":"0.138063446"},{"1":"4","2":"3","3":"TRUE","4":"43","5":"Bachelors","6":"H","7":"0.857396691"},{"1":"5","2":"3","3":"TRUE","4":"32","5":"HighSchoolOrCollege","6":"D","7":"0.772957791"},{"1":"6","2":"3","3":"TRUE","4":"26","5":"HighSchoolOrCollege","6":"I","7":"0.833980668"},{"1":"7","2":"3","3":"TRUE","4":"27","5":"Bachelors","6":"A","7":"0.958189409"},{"1":"8","2":"3","3":"TRUE","4":"20","5":"Bachelors","6":"G","7":"0.697554819"},{"1":"9","2":"3","3":"TRUE","4":"35","5":"Bachelors","6":"D","7":"0.467131409"},{"1":"10","2":"3","3":"TRUE","4":"48","5":"HighSchoolOrCollege","6":"D","7":"0.557176006"},{"1":"11","2":"3","3":"TRUE","4":"27","5":"HighSchoolOrCollege","6":"F","7":"0.254227320"},{"1":"12","2":"3","3":"TRUE","4":"34","5":"HighSchoolOrCollege","6":"D","7":"0.241615182"},{"1":"13","2":"3","3":"TRUE","4":"18","5":"Bachelors","6":"J","7":"0.724503834"},{"1":"14","2":"3","3":"TRUE","4":"38","5":"Graduate","6":"H","7":"0.930003289"},{"1":"15","2":"3","3":"TRUE","4":"35","5":"HighSchoolOrCollege","6":"I","7":"0.232266068"},{"1":"16","2":"3","3":"TRUE","4":"39","5":"Bachelors","6":"J","7":"0.392189088"},{"1":"17","2":"3","3":"TRUE","4":"57","5":"Bachelors","6":"I","7":"0.114667399"},{"1":"18","2":"3","3":"TRUE","4":"20","5":"Graduate","6":"I","7":"0.326965580"},{"1":"19","2":"3","3":"TRUE","4":"25","5":"Bachelors","6":"B","7":"0.486470164"},{"1":"20","2":"3","3":"TRUE","4":"41","5":"HighSchoolOrCollege","6":"I","7":"0.619057739"},{"1":"21","2":"3","3":"TRUE","4":"35","5":"Low","6":"E","7":"0.931240975"},{"1":"22","2":"3","3":"TRUE","4":"25","5":"HighSchoolOrCollege","6":"E","7":"0.663815663"},{"1":"23","2":"3","3":"TRUE","4":"57","5":"Low","6":"B","7":"0.260211811"},{"1":"24","2":"3","3":"TRUE","4":"44","5":"Bachelors","6":"D","7":"0.607328128"},{"1":"25","2":"3","3":"TRUE","4":"38","5":"HighSchoolOrCollege","6":"J","7":"0.520535752"},{"1":"26","2":"3","3":"TRUE","4":"28","5":"HighSchoolOrCollege","6":"F","7":"0.549177225"},{"1":"27","2":"3","3":"TRUE","4":"45","5":"HighSchoolOrCollege","6":"D","7":"0.135148815"},{"1":"28","2":"3","3":"TRUE","4":"54","5":"Bachelors","6":"A","7":"0.230073813"},{"1":"29","2":"3","3":"TRUE","4":"18","5":"Low","6":"C","7":"0.607853294"},{"1":"30","2":"3","3":"TRUE","4":"49","5":"HighSchoolOrCollege","6":"C","7":"0.681423545"},{"1":"31","2":"3","3":"TRUE","4":"40","5":"Graduate","6":"F","7":"0.232666750"},{"1":"32","2":"3","3":"TRUE","4":"33","5":"HighSchoolOrCollege","6":"C","7":"0.189498641"},{"1":"33","2":"3","3":"TRUE","4":"21","5":"Bachelors","6":"D","7":"0.094585958"},{"1":"34","2":"3","3":"TRUE","4":"23","5":"Low","6":"B","7":"0.767112453"},{"1":"35","2":"3","3":"TRUE","4":"20","5":"Low","6":"J","7":"0.707950782"},{"1":"36","2":"3","3":"TRUE","4":"41","5":"Graduate","6":"G","7":"0.348019484"},{"1":"37","2":"3","3":"TRUE","4":"54","5":"HighSchoolOrCollege","6":"G","7":"0.174975799"},{"1":"38","2":"3","3":"TRUE","4":"34","5":"Low","6":"D","7":"0.215116214"},{"1":"39","2":"3","3":"TRUE","4":"54","5":"Bachelors","6":"G","7":"0.862950926"},{"1":"40","2":"3","3":"TRUE","4":"55","5":"Low","6":"I","7":"0.880410054"},{"1":"41","2":"3","3":"TRUE","4":"41","5":"HighSchoolOrCollege","6":"F","7":"0.863663966"},{"1":"42","2":"3","3":"TRUE","4":"24","5":"HighSchoolOrCollege","6":"J","7":"0.055283617"},{"1":"43","2":"3","3":"TRUE","4":"48","5":"Bachelors","6":"E","7":"0.045228735"},{"1":"44","2":"3","3":"TRUE","4":"39","5":"Low","6":"C","7":"0.976499153"},{"1":"45","2":"3","3":"TRUE","4":"50","5":"Graduate","6":"E","7":"0.179657824"},{"1":"46","2":"3","3":"TRUE","4":"47","5":"HighSchoolOrCollege","6":"D","7":"0.225049088"},{"1":"47","2":"3","3":"TRUE","4":"58","5":"HighSchoolOrCollege","6":"C","7":"0.424159724"},{"1":"48","2":"3","3":"TRUE","4":"42","5":"HighSchoolOrCollege","6":"F","7":"0.485827661"},{"1":"49","2":"3","3":"TRUE","4":"54","5":"Graduate","6":"D","7":"0.229589642"},{"1":"50","2":"3","3":"TRUE","4":"45","5":"HighSchoolOrCollege","6":"H","7":"0.576174771"},{"1":"51","2":"3","3":"TRUE","4":"26","5":"Graduate","6":"G","7":"0.374354513"},{"1":"52","2":"3","3":"TRUE","4":"39","5":"HighSchoolOrCollege","6":"B","7":"0.730126771"},{"1":"53","2":"3","3":"TRUE","4":"19","5":"Low","6":"H","7":"0.140697641"},{"1":"54","2":"3","3":"TRUE","4":"32","5":"Graduate","6":"I","7":"0.778504463"},{"1":"55","2":"3","3":"TRUE","4":"37","5":"HighSchoolOrCollege","6":"J","7":"0.770806686"},{"1":"56","2":"3","3":"TRUE","4":"40","5":"Graduate","6":"G","7":"0.734056857"},{"1":"57","2":"3","3":"TRUE","4":"56","5":"Graduate","6":"A","7":"0.422849796"},{"1":"58","2":"3","3":"TRUE","4":"40","5":"Graduate","6":"J","7":"0.192945633"},{"1":"59","2":"3","3":"TRUE","4":"35","5":"Bachelors","6":"C","7":"0.186308253"},{"1":"60","2":"3","3":"TRUE","4":"46","5":"HighSchoolOrCollege","6":"D","7":"0.411129251"},{"1":"61","2":"3","3":"TRUE","4":"44","5":"HighSchoolOrCollege","6":"F","7":"0.598278749"},{"1":"62","2":"3","3":"TRUE","4":"57","5":"Bachelors","6":"A","7":"0.491406814"},{"1":"63","2":"3","3":"TRUE","4":"36","5":"HighSchoolOrCollege","6":"G","7":"0.583943591"},{"1":"64","2":"3","3":"TRUE","4":"52","5":"HighSchoolOrCollege","6":"I","7":"0.330606159"},{"1":"65","2":"3","3":"TRUE","4":"23","5":"HighSchoolOrCollege","6":"I","7":"0.498178653"},{"1":"66","2":"3","3":"TRUE","4":"51","5":"Bachelors","6":"J","7":"0.773765426"},{"1":"67","2":"3","3":"TRUE","4":"19","5":"HighSchoolOrCollege","6":"C","7":"0.438788793"},{"1":"68","2":"3","3":"TRUE","4":"42","5":"HighSchoolOrCollege","6":"G","7":"0.519538618"},{"1":"69","2":"3","3":"TRUE","4":"24","5":"Bachelors","6":"B","7":"0.743901318"},{"1":"70","2":"3","3":"TRUE","4":"49","5":"HighSchoolOrCollege","6":"D","7":"0.725446790"},{"1":"71","2":"3","3":"TRUE","4":"59","5":"Bachelors","6":"J","7":"0.947066909"},{"1":"72","2":"3","3":"TRUE","4":"21","5":"Bachelors","6":"B","7":"0.218744284"},{"1":"73","2":"3","3":"TRUE","4":"32","5":"Bachelors","6":"H","7":"0.381370977"},{"1":"74","2":"3","3":"TRUE","4":"48","5":"HighSchoolOrCollege","6":"B","7":"0.904601349"},{"1":"75","2":"2","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"A","7":"0.791342831"},{"1":"76","2":"2","3":"FALSE","4":"34","5":"HighSchoolOrCollege","6":"I","7":"0.362917704"},{"1":"77","2":"2","3":"FALSE","4":"20","5":"HighSchoolOrCollege","6":"C","7":"0.621716267"},{"1":"78","2":"2","3":"FALSE","4":"24","5":"Graduate","6":"B","7":"0.188638917"},{"1":"79","2":"2","3":"FALSE","4":"56","5":"HighSchoolOrCollege","6":"C","7":"0.034033890"},{"1":"80","2":"2","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"E","7":"0.401389930"},{"1":"81","2":"2","3":"FALSE","4":"27","5":"Graduate","6":"D","7":"0.871320255"},{"1":"82","2":"2","3":"FALSE","4":"40","5":"Graduate","6":"H","7":"0.955760648"},{"1":"83","2":"2","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"C","7":"0.027148207"},{"1":"84","2":"2","3":"FALSE","4":"33","5":"HighSchoolOrCollege","6":"J","7":"0.455102277"},{"1":"85","2":"2","3":"FALSE","4":"45","5":"HighSchoolOrCollege","6":"A","7":"0.354510651"},{"1":"86","2":"2","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"C","7":"0.399201318"},{"1":"87","2":"2","3":"FALSE","4":"58","5":"HighSchoolOrCollege","6":"A","7":"0.725176476"},{"1":"88","2":"2","3":"FALSE","4":"20","5":"HighSchoolOrCollege","6":"A","7":"0.746921002"},{"1":"89","2":"2","3":"FALSE","4":"54","5":"HighSchoolOrCollege","6":"J","7":"0.169054036"},{"1":"90","2":"2","3":"FALSE","4":"20","5":"HighSchoolOrCollege","6":"E","7":"0.139818869"},{"1":"91","2":"2","3":"FALSE","4":"41","5":"HighSchoolOrCollege","6":"E","7":"0.733204092"},{"1":"92","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"J","7":"0.467868166"},{"1":"93","2":"2","3":"FALSE","4":"48","5":"HighSchoolOrCollege","6":"B","7":"0.580101654"},{"1":"94","2":"2","3":"FALSE","4":"23","5":"Bachelors","6":"C","7":"0.413830119"},{"1":"95","2":"2","3":"FALSE","4":"47","5":"Low","6":"H","7":"0.451218504"},{"1":"96","2":"2","3":"FALSE","4":"23","5":"HighSchoolOrCollege","6":"B","7":"0.504845427"},{"1":"97","2":"2","3":"FALSE","4":"56","5":"Graduate","6":"J","7":"0.679506778"},{"1":"98","2":"2","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"B","7":"0.366630644"},{"1":"99","2":"2","3":"FALSE","4":"31","5":"Bachelors","6":"H","7":"0.396866650"},{"1":"100","2":"2","3":"FALSE","4":"29","5":"Low","6":"F","7":"0.142686163"},{"1":"101","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"A","7":"0.020504586"},{"1":"102","2":"2","3":"FALSE","4":"56","5":"Bachelors","6":"A","7":"0.265501227"},{"1":"103","2":"2","3":"FALSE","4":"18","5":"Bachelors","6":"J","7":"0.194724115"},{"1":"104","2":"2","3":"FALSE","4":"47","5":"HighSchoolOrCollege","6":"F","7":"0.991414933"},{"1":"105","2":"2","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"J","7":"0.851915894"},{"1":"106","2":"2","3":"FALSE","4":"34","5":"Bachelors","6":"A","7":"0.700811306"},{"1":"107","2":"2","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"C","7":"0.357131296"},{"1":"108","2":"2","3":"FALSE","4":"36","5":"HighSchoolOrCollege","6":"C","7":"0.098903572"},{"1":"109","2":"2","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"C","7":"0.290464519"},{"1":"110","2":"2","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"D","7":"0.313305546"},{"1":"111","2":"2","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"B","7":"0.720330648"},{"1":"112","2":"2","3":"FALSE","4":"23","5":"Graduate","6":"C","7":"0.646977694"},{"1":"113","2":"2","3":"FALSE","4":"51","5":"Graduate","6":"G","7":"0.999233967"},{"1":"114","2":"2","3":"FALSE","4":"55","5":"Graduate","6":"G","7":"0.413490065"},{"1":"115","2":"2","3":"FALSE","4":"56","5":"HighSchoolOrCollege","6":"J","7":"0.577532820"},{"1":"116","2":"2","3":"FALSE","4":"43","5":"Graduate","6":"E","7":"0.302827880"},{"1":"117","2":"2","3":"FALSE","4":"22","5":"Bachelors","6":"F","7":"0.760663448"},{"1":"118","2":"2","3":"FALSE","4":"33","5":"Bachelors","6":"C","7":"0.140611532"},{"1":"119","2":"2","3":"FALSE","4":"32","5":"Graduate","6":"B","7":"0.612907872"},{"1":"120","2":"2","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"E","7":"0.876546337"},{"1":"121","2":"2","3":"FALSE","4":"45","5":"HighSchoolOrCollege","6":"F","7":"0.415372290"},{"1":"122","2":"2","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"A","7":"0.159723746"},{"1":"123","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"B","7":"0.118152103"},{"1":"124","2":"2","3":"FALSE","4":"49","5":"Graduate","6":"I","7":"0.143366340"},{"1":"125","2":"2","3":"FALSE","4":"50","5":"Graduate","6":"E","7":"0.150075471"},{"1":"126","2":"2","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"A","7":"0.728952870"},{"1":"127","2":"2","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"E","7":"0.882038681"},{"1":"128","2":"2","3":"FALSE","4":"57","5":"Bachelors","6":"G","7":"0.718790546"},{"1":"129","2":"2","3":"FALSE","4":"27","5":"HighSchoolOrCollege","6":"B","7":"0.371183768"},{"1":"130","2":"2","3":"FALSE","4":"48","5":"HighSchoolOrCollege","6":"J","7":"0.524660325"},{"1":"131","2":"2","3":"FALSE","4":"26","5":"Bachelors","6":"H","7":"0.802929522"},{"1":"132","2":"2","3":"FALSE","4":"36","5":"Graduate","6":"I","7":"0.540291283"},{"1":"133","2":"2","3":"FALSE","4":"27","5":"HighSchoolOrCollege","6":"I","7":"0.551268581"},{"1":"134","2":"2","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"D","7":"0.247000174"},{"1":"135","2":"2","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"E","7":"0.860810730"},{"1":"136","2":"2","3":"FALSE","4":"34","5":"Graduate","6":"A","7":"0.555650922"},{"1":"137","2":"2","3":"FALSE","4":"34","5":"HighSchoolOrCollege","6":"C","7":"0.873011280"},{"1":"138","2":"2","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"H","7":"0.732757238"},{"1":"139","2":"2","3":"FALSE","4":"48","5":"Bachelors","6":"C","7":"0.846097713"},{"1":"140","2":"2","3":"FALSE","4":"24","5":"Bachelors","6":"I","7":"0.216307476"},{"1":"141","2":"2","3":"FALSE","4":"24","5":"Bachelors","6":"B","7":"0.792161061"},{"1":"142","2":"2","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"F","7":"0.789243454"},{"1":"143","2":"2","3":"FALSE","4":"18","5":"HighSchoolOrCollege","6":"A","7":"0.107753878"},{"1":"144","2":"2","3":"FALSE","4":"23","5":"HighSchoolOrCollege","6":"I","7":"0.444080663"},{"1":"145","2":"2","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"F","7":"0.882253016"},{"1":"146","2":"2","3":"FALSE","4":"46","5":"HighSchoolOrCollege","6":"J","7":"0.643761923"},{"1":"147","2":"2","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"J","7":"0.528698226"},{"1":"148","2":"2","3":"FALSE","4":"37","5":"Bachelors","6":"A","7":"0.266938991"},{"1":"149","2":"2","3":"FALSE","4":"26","5":"Bachelors","6":"A","7":"0.806541060"},{"1":"150","2":"2","3":"FALSE","4":"44","5":"Bachelors","6":"H","7":"0.208074050"},{"1":"151","2":"2","3":"FALSE","4":"46","5":"Low","6":"G","7":"0.159854965"},{"1":"152","2":"2","3":"FALSE","4":"41","5":"HighSchoolOrCollege","6":"I","7":"0.608973900"},{"1":"153","2":"2","3":"FALSE","4":"23","5":"HighSchoolOrCollege","6":"A","7":"0.758079342"},{"1":"154","2":"2","3":"FALSE","4":"29","5":"HighSchoolOrCollege","6":"J","7":"0.954706293"},{"1":"155","2":"2","3":"FALSE","4":"55","5":"Graduate","6":"A","7":"0.176618296"},{"1":"156","2":"2","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"J","7":"0.466716971"},{"1":"157","2":"2","3":"FALSE","4":"25","5":"Graduate","6":"J","7":"0.254005742"},{"1":"158","2":"2","3":"FALSE","4":"25","5":"Graduate","6":"J","7":"0.468930899"},{"1":"159","2":"2","3":"FALSE","4":"39","5":"HighSchoolOrCollege","6":"G","7":"0.242972350"},{"1":"160","2":"2","3":"FALSE","4":"52","5":"Bachelors","6":"F","7":"0.168095803"},{"1":"161","2":"2","3":"FALSE","4":"47","5":"HighSchoolOrCollege","6":"A","7":"0.965708743"},{"1":"162","2":"2","3":"FALSE","4":"36","5":"HighSchoolOrCollege","6":"B","7":"0.936659644"},{"1":"163","2":"2","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"D","7":"0.225309113"},{"1":"164","2":"2","3":"FALSE","4":"27","5":"Graduate","6":"F","7":"0.812453062"},{"1":"165","2":"2","3":"FALSE","4":"30","5":"Graduate","6":"G","7":"0.964990249"},{"1":"166","2":"2","3":"FALSE","4":"21","5":"Low","6":"A","7":"0.627739055"},{"1":"167","2":"2","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"F","7":"0.846680285"},{"1":"168","2":"1","3":"FALSE","4":"48","5":"Graduate","6":"G","7":"0.365595636"},{"1":"169","2":"1","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"J","7":"0.364391587"},{"1":"170","2":"1","3":"FALSE","4":"20","5":"Bachelors","6":"G","7":"0.133248852"},{"1":"171","2":"1","3":"FALSE","4":"58","5":"Low","6":"I","7":"0.114389766"},{"1":"172","2":"1","3":"FALSE","4":"38","5":"Graduate","6":"I","7":"0.575001936"},{"1":"173","2":"1","3":"FALSE","4":"19","5":"Graduate","6":"C","7":"0.785213730"},{"1":"174","2":"1","3":"FALSE","4":"43","5":"Graduate","6":"D","7":"0.718049535"},{"1":"175","2":"1","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"I","7":"0.481863571"},{"1":"176","2":"1","3":"FALSE","4":"24","5":"Graduate","6":"J","7":"0.931237599"},{"1":"177","2":"1","3":"FALSE","4":"23","5":"HighSchoolOrCollege","6":"E","7":"0.495453274"},{"1":"178","2":"1","3":"FALSE","4":"29","5":"Bachelors","6":"E","7":"0.725246226"},{"1":"179","2":"1","3":"FALSE","4":"44","5":"Bachelors","6":"F","7":"0.900831449"},{"1":"180","2":"1","3":"FALSE","4":"34","5":"Low","6":"H","7":"0.100777319"},{"1":"181","2":"1","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"E","7":"0.787497465"},{"1":"182","2":"1","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"C","7":"0.839659224"},{"1":"183","2":"1","3":"FALSE","4":"41","5":"Graduate","6":"F","7":"0.109940826"},{"1":"184","2":"1","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"G","7":"0.952691160"},{"1":"185","2":"1","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"G","7":"0.270514436"},{"1":"186","2":"1","3":"FALSE","4":"38","5":"Graduate","6":"C","7":"0.892222410"},{"1":"187","2":"1","3":"FALSE","4":"44","5":"Low","6":"B","7":"0.207533138"},{"1":"188","2":"1","3":"FALSE","4":"19","5":"Bachelors","6":"D","7":"0.730336584"},{"1":"189","2":"1","3":"FALSE","4":"53","5":"Graduate","6":"E","7":"0.216100876"},{"1":"190","2":"1","3":"FALSE","4":"31","5":"Bachelors","6":"H","7":"0.610530330"},{"1":"191","2":"1","3":"FALSE","4":"48","5":"HighSchoolOrCollege","6":"G","7":"0.447070968"},{"1":"192","2":"1","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"I","7":"0.262612842"},{"1":"193","2":"1","3":"FALSE","4":"23","5":"Bachelors","6":"D","7":"0.976160413"},{"1":"194","2":"1","3":"FALSE","4":"23","5":"Bachelors","6":"A","7":"0.162966636"},{"1":"195","2":"1","3":"FALSE","4":"60","5":"Graduate","6":"B","7":"0.058702708"},{"1":"196","2":"1","3":"FALSE","4":"28","5":"Low","6":"I","7":"0.360151845"},{"1":"197","2":"1","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"C","7":"0.901982488"},{"1":"198","2":"1","3":"FALSE","4":"39","5":"Bachelors","6":"H","7":"0.321634269"},{"1":"199","2":"1","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"A","7":"0.379086335"},{"1":"200","2":"1","3":"FALSE","4":"51","5":"Graduate","6":"H","7":"0.122095522"},{"1":"201","2":"1","3":"FALSE","4":"54","5":"HighSchoolOrCollege","6":"A","7":"0.203183443"},{"1":"202","2":"1","3":"FALSE","4":"25","5":"HighSchoolOrCollege","6":"A","7":"0.985936814"},{"1":"203","2":"1","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"J","7":"0.939180121"},{"1":"204","2":"1","3":"FALSE","4":"33","5":"Low","6":"C","7":"0.271944209"},{"1":"205","2":"1","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"I","7":"0.194899452"},{"1":"206","2":"1","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"D","7":"0.365692745"},{"1":"207","2":"1","3":"FALSE","4":"30","5":"Bachelors","6":"B","7":"0.814611008"},{"1":"208","2":"1","3":"FALSE","4":"56","5":"HighSchoolOrCollege","6":"E","7":"0.371925591"},{"1":"209","2":"1","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"C","7":"0.256352180"},{"1":"210","2":"1","3":"FALSE","4":"18","5":"Low","6":"A","7":"0.857673439"},{"1":"211","2":"1","3":"FALSE","4":"20","5":"Bachelors","6":"F","7":"0.214486332"},{"1":"212","2":"1","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"D","7":"0.748988452"},{"1":"213","2":"1","3":"FALSE","4":"44","5":"Bachelors","6":"I","7":"0.961066785"},{"1":"214","2":"1","3":"FALSE","4":"33","5":"HighSchoolOrCollege","6":"C","7":"0.300610569"},{"1":"215","2":"1","3":"FALSE","4":"31","5":"Bachelors","6":"A","7":"0.089838002"},{"1":"216","2":"1","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"C","7":"0.153900625"},{"1":"217","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"F","7":"0.948411855"},{"1":"218","2":"1","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"B","7":"0.971074532"},{"1":"219","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"I","7":"0.955659284"},{"1":"220","2":"1","3":"FALSE","4":"56","5":"Graduate","6":"F","7":"0.792513290"},{"1":"221","2":"1","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"I","7":"0.727868507"},{"1":"222","2":"1","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"G","7":"0.617025806"},{"1":"223","2":"1","3":"FALSE","4":"43","5":"Bachelors","6":"F","7":"0.700821194"},{"1":"224","2":"1","3":"FALSE","4":"41","5":"Low","6":"G","7":"0.284413750"},{"1":"225","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"E","7":"0.004829228"},{"1":"226","2":"1","3":"FALSE","4":"43","5":"Bachelors","6":"I","7":"0.965943386"},{"1":"227","2":"1","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"H","7":"0.490213553"},{"1":"228","2":"1","3":"FALSE","4":"53","5":"Bachelors","6":"J","7":"0.168680628"},{"1":"229","2":"1","3":"FALSE","4":"41","5":"Bachelors","6":"G","7":"0.686020340"},{"1":"230","2":"1","3":"FALSE","4":"52","5":"Bachelors","6":"D","7":"0.004466007"},{"1":"231","2":"1","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"A","7":"0.902213545"},{"1":"232","2":"1","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"C","7":"0.966858390"},{"1":"233","2":"1","3":"FALSE","4":"38","5":"Graduate","6":"A","7":"0.263283426"},{"1":"234","2":"1","3":"FALSE","4":"43","5":"Graduate","6":"C","7":"0.332411556"},{"1":"235","2":"1","3":"FALSE","4":"29","5":"Graduate","6":"G","7":"0.936585851"},{"1":"236","2":"1","3":"FALSE","4":"44","5":"Low","6":"I","7":"0.107740330"},{"1":"237","2":"1","3":"FALSE","4":"48","5":"Graduate","6":"C","7":"0.110877355"},{"1":"238","2":"1","3":"FALSE","4":"21","5":"Low","6":"A","7":"0.256101892"},{"1":"239","2":"1","3":"FALSE","4":"45","5":"Low","6":"I","7":"0.795405195"},{"1":"240","2":"1","3":"FALSE","4":"21","5":"Graduate","6":"J","7":"0.641752748"},{"1":"241","2":"1","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"I","7":"0.088547964"},{"1":"242","2":"1","3":"FALSE","4":"26","5":"Graduate","6":"H","7":"0.113248116"},{"1":"243","2":"1","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"H","7":"0.662515201"},{"1":"244","2":"1","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"I","7":"0.969991586"},{"1":"245","2":"1","3":"FALSE","4":"52","5":"Graduate","6":"C","7":"0.859058201"},{"1":"246","2":"1","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"B","7":"0.968768651"},{"1":"247","2":"1","3":"FALSE","4":"33","5":"Low","6":"B","7":"0.867500339"},{"1":"248","2":"1","3":"FALSE","4":"51","5":"Bachelors","6":"H","7":"0.287889236"},{"1":"249","2":"1","3":"FALSE","4":"25","5":"Graduate","6":"G","7":"0.842954238"},{"1":"250","2":"1","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"E","7":"0.627740735"},{"1":"251","2":"1","3":"FALSE","4":"58","5":"HighSchoolOrCollege","6":"D","7":"0.386580333"},{"1":"252","2":"3","3":"TRUE","4":"59","5":"HighSchoolOrCollege","6":"D","7":"0.564718074"},{"1":"253","2":"3","3":"TRUE","4":"43","5":"Graduate","6":"G","7":"0.560328176"},{"1":"254","2":"3","3":"TRUE","4":"23","5":"Bachelors","6":"D","7":"0.179681770"},{"1":"255","2":"3","3":"TRUE","4":"59","5":"HighSchoolOrCollege","6":"H","7":"0.852187763"},{"1":"256","2":"3","3":"TRUE","4":"25","5":"HighSchoolOrCollege","6":"F","7":"0.807211251"},{"1":"257","2":"3","3":"TRUE","4":"24","5":"HighSchoolOrCollege","6":"D","7":"0.405851044"},{"1":"258","2":"3","3":"TRUE","4":"37","5":"Bachelors","6":"G","7":"0.951577316"},{"1":"259","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"J","7":"0.192863070"},{"1":"260","2":"3","3":"TRUE","4":"52","5":"Graduate","6":"B","7":"0.333665760"},{"1":"261","2":"3","3":"TRUE","4":"29","5":"HighSchoolOrCollege","6":"H","7":"0.465652496"},{"1":"262","2":"3","3":"TRUE","4":"52","5":"HighSchoolOrCollege","6":"F","7":"0.664033926"},{"1":"263","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"A","7":"0.223825175"},{"1":"264","2":"3","3":"TRUE","4":"28","5":"HighSchoolOrCollege","6":"H","7":"0.106440071"},{"1":"265","2":"3","3":"TRUE","4":"44","5":"Bachelors","6":"D","7":"0.048044295"},{"1":"266","2":"3","3":"TRUE","4":"32","5":"Graduate","6":"F","7":"0.972629863"},{"1":"267","2":"3","3":"TRUE","4":"59","5":"HighSchoolOrCollege","6":"G","7":"0.798810236"},{"1":"268","2":"3","3":"TRUE","4":"53","5":"HighSchoolOrCollege","6":"G","7":"0.041170737"},{"1":"269","2":"3","3":"TRUE","4":"56","5":"HighSchoolOrCollege","6":"F","7":"0.360772350"},{"1":"270","2":"3","3":"TRUE","4":"32","5":"HighSchoolOrCollege","6":"E","7":"0.173976665"},{"1":"271","2":"3","3":"TRUE","4":"57","5":"HighSchoolOrCollege","6":"D","7":"0.331893543"},{"1":"272","2":"3","3":"TRUE","4":"47","5":"HighSchoolOrCollege","6":"F","7":"0.669281126"},{"1":"273","2":"3","3":"TRUE","4":"46","5":"HighSchoolOrCollege","6":"B","7":"0.874083512"},{"1":"274","2":"3","3":"TRUE","4":"44","5":"HighSchoolOrCollege","6":"G","7":"0.792651370"},{"1":"275","2":"3","3":"TRUE","4":"60","5":"HighSchoolOrCollege","6":"F","7":"0.173802734"},{"1":"276","2":"3","3":"TRUE","4":"50","5":"Bachelors","6":"A","7":"0.107405002"},{"1":"277","2":"3","3":"TRUE","4":"34","5":"HighSchoolOrCollege","6":"E","7":"0.836787725"},{"1":"278","2":"3","3":"TRUE","4":"56","5":"Bachelors","6":"B","7":"0.259541618"},{"1":"279","2":"3","3":"TRUE","4":"23","5":"HighSchoolOrCollege","6":"A","7":"0.811965348"},{"1":"280","2":"3","3":"TRUE","4":"25","5":"Bachelors","6":"J","7":"0.102762652"},{"1":"281","2":"3","3":"TRUE","4":"27","5":"HighSchoolOrCollege","6":"C","7":"0.478284265"},{"1":"282","2":"3","3":"TRUE","4":"38","5":"HighSchoolOrCollege","6":"B","7":"0.109360456"},{"1":"283","2":"3","3":"TRUE","4":"60","5":"Graduate","6":"D","7":"0.880967299"},{"1":"284","2":"3","3":"TRUE","4":"52","5":"HighSchoolOrCollege","6":"B","7":"0.754293139"},{"1":"285","2":"3","3":"TRUE","4":"45","5":"HighSchoolOrCollege","6":"A","7":"0.897884327"},{"1":"286","2":"3","3":"TRUE","4":"20","5":"HighSchoolOrCollege","6":"E","7":"0.476984055"},{"1":"287","2":"3","3":"TRUE","4":"51","5":"HighSchoolOrCollege","6":"E","7":"0.599616007"},{"1":"288","2":"3","3":"TRUE","4":"34","5":"HighSchoolOrCollege","6":"C","7":"0.910143395"},{"1":"289","2":"3","3":"TRUE","4":"35","5":"Graduate","6":"E","7":"0.955240694"},{"1":"290","2":"3","3":"TRUE","4":"43","5":"Graduate","6":"A","7":"0.271552097"},{"1":"291","2":"3","3":"TRUE","4":"37","5":"Low","6":"E","7":"0.370084679"},{"1":"292","2":"3","3":"TRUE","4":"27","5":"Bachelors","6":"B","7":"0.686374918"},{"1":"293","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"F","7":"0.126082302"},{"1":"294","2":"3","3":"TRUE","4":"24","5":"HighSchoolOrCollege","6":"G","7":"0.847052228"},{"1":"295","2":"3","3":"TRUE","4":"41","5":"Graduate","6":"F","7":"0.439355556"},{"1":"296","2":"3","3":"TRUE","4":"39","5":"Graduate","6":"H","7":"0.548350934"},{"1":"297","2":"3","3":"TRUE","4":"53","5":"HighSchoolOrCollege","6":"D","7":"0.057905387"},{"1":"298","2":"3","3":"TRUE","4":"45","5":"HighSchoolOrCollege","6":"G","7":"0.852555697"},{"1":"299","2":"3","3":"TRUE","4":"35","5":"HighSchoolOrCollege","6":"I","7":"0.514901600"},{"1":"300","2":"3","3":"TRUE","4":"58","5":"HighSchoolOrCollege","6":"H","7":"0.214347810"},{"1":"301","2":"3","3":"TRUE","4":"46","5":"Low","6":"J","7":"0.873371058"},{"1":"302","2":"3","3":"TRUE","4":"44","5":"HighSchoolOrCollege","6":"A","7":"0.254585434"},{"1":"303","2":"3","3":"TRUE","4":"34","5":"Graduate","6":"F","7":"0.543218407"},{"1":"304","2":"3","3":"TRUE","4":"50","5":"HighSchoolOrCollege","6":"H","7":"0.183595892"},{"1":"305","2":"3","3":"TRUE","4":"31","5":"Bachelors","6":"C","7":"0.843255520"},{"1":"306","2":"3","3":"TRUE","4":"49","5":"HighSchoolOrCollege","6":"I","7":"0.260386143"},{"1":"307","2":"3","3":"TRUE","4":"38","5":"Graduate","6":"H","7":"0.962210067"},{"1":"308","2":"3","3":"TRUE","4":"30","5":"HighSchoolOrCollege","6":"F","7":"0.172405182"},{"1":"309","2":"3","3":"TRUE","4":"30","5":"HighSchoolOrCollege","6":"E","7":"0.125682773"},{"1":"310","2":"3","3":"TRUE","4":"29","5":"HighSchoolOrCollege","6":"H","7":"0.061286668"},{"1":"311","2":"3","3":"TRUE","4":"45","5":"HighSchoolOrCollege","6":"D","7":"0.699020662"},{"1":"312","2":"3","3":"TRUE","4":"42","5":"HighSchoolOrCollege","6":"A","7":"0.260798961"},{"1":"313","2":"3","3":"TRUE","4":"55","5":"Low","6":"I","7":"0.093271632"},{"1":"314","2":"3","3":"TRUE","4":"20","5":"HighSchoolOrCollege","6":"H","7":"0.633335142"},{"1":"315","2":"3","3":"TRUE","4":"25","5":"Graduate","6":"B","7":"0.287666416"},{"1":"316","2":"3","3":"TRUE","4":"34","5":"HighSchoolOrCollege","6":"H","7":"0.175386489"},{"1":"317","2":"3","3":"TRUE","4":"52","5":"Low","6":"G","7":"0.494087429"},{"1":"318","2":"3","3":"TRUE","4":"55","5":"HighSchoolOrCollege","6":"F","7":"0.473772081"},{"1":"319","2":"3","3":"TRUE","4":"32","5":"Low","6":"B","7":"0.253614379"},{"1":"320","2":"3","3":"TRUE","4":"53","5":"Bachelors","6":"G","7":"0.477539156"},{"1":"321","2":"3","3":"TRUE","4":"18","5":"Graduate","6":"F","7":"0.842877969"},{"1":"322","2":"3","3":"TRUE","4":"59","5":"HighSchoolOrCollege","6":"I","7":"0.650831243"},{"1":"323","2":"3","3":"TRUE","4":"31","5":"Graduate","6":"B","7":"0.757226712"},{"1":"324","2":"3","3":"TRUE","4":"48","5":"HighSchoolOrCollege","6":"C","7":"0.122182828"},{"1":"325","2":"3","3":"TRUE","4":"19","5":"HighSchoolOrCollege","6":"I","7":"0.480441948"},{"1":"326","2":"3","3":"TRUE","4":"24","5":"Bachelors","6":"F","7":"0.654885921"},{"1":"327","2":"2","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"C","7":"0.228872071"},{"1":"328","2":"2","3":"FALSE","4":"51","5":"Low","6":"H","7":"0.346047608"},{"1":"329","2":"2","3":"FALSE","4":"53","5":"Bachelors","6":"J","7":"0.085267909"},{"1":"330","2":"2","3":"FALSE","4":"25","5":"Graduate","6":"G","7":"0.773811800"},{"1":"331","2":"2","3":"FALSE","4":"18","5":"Graduate","6":"G","7":"0.417763616"},{"1":"332","2":"2","3":"FALSE","4":"23","5":"Bachelors","6":"H","7":"0.323175901"},{"1":"333","2":"2","3":"FALSE","4":"37","5":"Bachelors","6":"G","7":"0.299174844"},{"1":"334","2":"2","3":"FALSE","4":"22","5":"Bachelors","6":"J","7":"0.103185768"},{"1":"335","2":"2","3":"FALSE","4":"47","5":"Graduate","6":"H","7":"0.328727521"},{"1":"336","2":"2","3":"FALSE","4":"56","5":"Graduate","6":"G","7":"0.600454813"},{"1":"337","2":"2","3":"FALSE","4":"58","5":"Graduate","6":"B","7":"0.108965479"},{"1":"338","2":"2","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"H","7":"0.713809975"},{"1":"339","2":"2","3":"FALSE","4":"29","5":"Bachelors","6":"H","7":"0.210989130"},{"1":"340","2":"2","3":"FALSE","4":"33","5":"Graduate","6":"E","7":"0.034283769"},{"1":"341","2":"2","3":"FALSE","4":"34","5":"HighSchoolOrCollege","6":"G","7":"0.227355255"},{"1":"342","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"E","7":"0.584828154"},{"1":"343","2":"2","3":"FALSE","4":"42","5":"Bachelors","6":"C","7":"0.029688855"},{"1":"344","2":"2","3":"FALSE","4":"41","5":"HighSchoolOrCollege","6":"D","7":"0.025541228"},{"1":"345","2":"2","3":"FALSE","4":"36","5":"Bachelors","6":"E","7":"0.464569175"},{"1":"346","2":"2","3":"FALSE","4":"55","5":"Low","6":"J","7":"0.704628940"},{"1":"347","2":"2","3":"FALSE","4":"30","5":"Bachelors","6":"D","7":"0.270904553"},{"1":"348","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"A","7":"0.573738776"},{"1":"349","2":"2","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"B","7":"0.510117460"},{"1":"350","2":"2","3":"FALSE","4":"38","5":"Graduate","6":"I","7":"0.517999111"},{"1":"351","2":"2","3":"FALSE","4":"59","5":"Bachelors","6":"E","7":"0.269322751"},{"1":"352","2":"2","3":"FALSE","4":"29","5":"HighSchoolOrCollege","6":"C","7":"0.788841177"},{"1":"353","2":"2","3":"FALSE","4":"34","5":"Low","6":"E","7":"0.340883840"},{"1":"354","2":"2","3":"FALSE","4":"60","5":"Low","6":"C","7":"0.210350750"},{"1":"355","2":"2","3":"FALSE","4":"38","5":"Graduate","6":"J","7":"0.735837586"},{"1":"356","2":"2","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"C","7":"0.686094014"},{"1":"357","2":"2","3":"FALSE","4":"40","5":"Graduate","6":"B","7":"0.536520661"},{"1":"358","2":"2","3":"FALSE","4":"36","5":"HighSchoolOrCollege","6":"F","7":"0.969014671"},{"1":"359","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"H","7":"0.757990018"},{"1":"360","2":"2","3":"FALSE","4":"32","5":"HighSchoolOrCollege","6":"H","7":"0.410880110"},{"1":"361","2":"2","3":"FALSE","4":"32","5":"Low","6":"F","7":"0.299050559"},{"1":"362","2":"2","3":"FALSE","4":"28","5":"HighSchoolOrCollege","6":"D","7":"0.753234813"},{"1":"363","2":"2","3":"FALSE","4":"49","5":"Graduate","6":"G","7":"0.404476978"},{"1":"364","2":"2","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"J","7":"0.253379525"},{"1":"365","2":"2","3":"FALSE","4":"20","5":"Low","6":"G","7":"0.438986616"},{"1":"366","2":"2","3":"FALSE","4":"39","5":"HighSchoolOrCollege","6":"H","7":"0.138808298"},{"1":"367","2":"2","3":"FALSE","4":"29","5":"HighSchoolOrCollege","6":"B","7":"0.136644620"},{"1":"368","2":"2","3":"FALSE","4":"20","5":"Graduate","6":"D","7":"0.039923482"},{"1":"369","2":"2","3":"FALSE","4":"54","5":"HighSchoolOrCollege","6":"I","7":"0.139040705"},{"1":"370","2":"2","3":"FALSE","4":"33","5":"Bachelors","6":"J","7":"0.702474210"},{"1":"371","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"E","7":"0.371688755"},{"1":"372","2":"2","3":"FALSE","4":"18","5":"Bachelors","6":"A","7":"0.986983183"},{"1":"373","2":"2","3":"FALSE","4":"38","5":"Graduate","6":"B","7":"0.979407864"},{"1":"374","2":"2","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"F","7":"0.854172230"},{"1":"375","2":"2","3":"FALSE","4":"34","5":"HighSchoolOrCollege","6":"D","7":"0.184734538"},{"1":"376","2":"2","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"F","7":"0.141162784"},{"1":"377","2":"2","3":"FALSE","4":"30","5":"Graduate","6":"G","7":"0.035335186"},{"1":"378","2":"2","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"C","7":"0.991810222"},{"1":"379","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"F","7":"0.061959185"},{"1":"380","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"C","7":"0.690118062"},{"1":"381","2":"2","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"A","7":"0.621188126"},{"1":"382","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"H","7":"0.964579432"},{"1":"383","2":"2","3":"FALSE","4":"23","5":"HighSchoolOrCollege","6":"J","7":"0.694582993"},{"1":"384","2":"2","3":"FALSE","4":"39","5":"HighSchoolOrCollege","6":"G","7":"0.949906952"},{"1":"385","2":"2","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"F","7":"0.569018722"},{"1":"386","2":"2","3":"FALSE","4":"39","5":"Graduate","6":"H","7":"0.479804894"},{"1":"387","2":"2","3":"FALSE","4":"58","5":"HighSchoolOrCollege","6":"G","7":"0.401545108"},{"1":"388","2":"2","3":"FALSE","4":"48","5":"Graduate","6":"A","7":"0.687759804"},{"1":"389","2":"2","3":"FALSE","4":"52","5":"Graduate","6":"J","7":"0.596117189"},{"1":"390","2":"2","3":"FALSE","4":"31","5":"Bachelors","6":"J","7":"0.765307140"},{"1":"391","2":"2","3":"FALSE","4":"42","5":"Low","6":"G","7":"0.140477262"},{"1":"392","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"J","7":"0.848830989"},{"1":"393","2":"2","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"G","7":"0.909124868"},{"1":"394","2":"2","3":"FALSE","4":"54","5":"HighSchoolOrCollege","6":"A","7":"0.527220670"},{"1":"395","2":"2","3":"FALSE","4":"54","5":"Graduate","6":"G","7":"0.675097131"},{"1":"396","2":"2","3":"FALSE","4":"41","5":"Bachelors","6":"G","7":"0.364809779"},{"1":"397","2":"2","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"H","7":"0.396967817"},{"1":"398","2":"2","3":"FALSE","4":"53","5":"Bachelors","6":"I","7":"0.963462391"},{"1":"399","2":"2","3":"FALSE","4":"33","5":"HighSchoolOrCollege","6":"J","7":"0.082643442"},{"1":"400","2":"2","3":"FALSE","4":"36","5":"HighSchoolOrCollege","6":"F","7":"0.512379139"},{"1":"401","2":"2","3":"FALSE","4":"47","5":"HighSchoolOrCollege","6":"J","7":"0.264710804"},{"1":"402","2":"2","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"J","7":"0.674497947"},{"1":"403","2":"2","3":"FALSE","4":"44","5":"Bachelors","6":"J","7":"0.884407261"},{"1":"404","2":"2","3":"FALSE","4":"58","5":"Low","6":"I","7":"0.230962551"},{"1":"405","2":"2","3":"FALSE","4":"25","5":"HighSchoolOrCollege","6":"D","7":"0.617829242"},{"1":"406","2":"2","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"H","7":"0.801609951"},{"1":"407","2":"2","3":"FALSE","4":"20","5":"HighSchoolOrCollege","6":"A","7":"0.686077576"},{"1":"408","2":"2","3":"FALSE","4":"33","5":"Bachelors","6":"H","7":"0.794096009"},{"1":"409","2":"2","3":"FALSE","4":"18","5":"Graduate","6":"H","7":"0.645271398"},{"1":"410","2":"2","3":"FALSE","4":"42","5":"HighSchoolOrCollege","6":"B","7":"0.175733331"},{"1":"411","2":"2","3":"FALSE","4":"21","5":"HighSchoolOrCollege","6":"I","7":"0.507728111"},{"1":"412","2":"2","3":"FALSE","4":"58","5":"HighSchoolOrCollege","6":"A","7":"0.662852559"},{"1":"413","2":"2","3":"FALSE","4":"56","5":"Graduate","6":"D","7":"0.106292289"},{"1":"414","2":"2","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"G","7":"0.171319189"},{"1":"415","2":"2","3":"FALSE","4":"18","5":"HighSchoolOrCollege","6":"I","7":"0.128459971"},{"1":"416","2":"2","3":"FALSE","4":"30","5":"Bachelors","6":"G","7":"0.370202736"},{"1":"417","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"G","7":"0.695894652"},{"1":"418","2":"2","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"E","7":"0.976850716"},{"1":"419","2":"2","3":"FALSE","4":"36","5":"Low","6":"A","7":"0.622118277"},{"1":"420","2":"1","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"G","7":"0.085672033"},{"1":"421","2":"1","3":"FALSE","4":"38","5":"Bachelors","6":"A","7":"0.517662469"},{"1":"422","2":"1","3":"FALSE","4":"27","5":"Graduate","6":"D","7":"0.647441392"},{"1":"423","2":"1","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"I","7":"0.132465984"},{"1":"424","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"D","7":"0.723576465"},{"1":"425","2":"1","3":"FALSE","4":"33","5":"HighSchoolOrCollege","6":"E","7":"0.334417031"},{"1":"426","2":"1","3":"FALSE","4":"41","5":"Graduate","6":"G","7":"0.469702696"},{"1":"427","2":"1","3":"FALSE","4":"37","5":"Bachelors","6":"H","7":"0.916735753"},{"1":"428","2":"1","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"G","7":"0.096312430"},{"1":"429","2":"1","3":"FALSE","4":"53","5":"Graduate","6":"H","7":"0.059265966"},{"1":"430","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"C","7":"0.949453894"},{"1":"431","2":"1","3":"FALSE","4":"20","5":"HighSchoolOrCollege","6":"E","7":"0.420302416"},{"1":"432","2":"1","3":"FALSE","4":"26","5":"Bachelors","6":"G","7":"0.981851015"},{"1":"433","2":"1","3":"FALSE","4":"32","5":"Bachelors","6":"G","7":"0.000985000"},{"1":"434","2":"1","3":"FALSE","4":"25","5":"Bachelors","6":"A","7":"0.618031654"},{"1":"435","2":"1","3":"FALSE","4":"27","5":"Low","6":"C","7":"0.725281643"},{"1":"436","2":"1","3":"FALSE","4":"36","5":"HighSchoolOrCollege","6":"J","7":"0.949412047"},{"1":"437","2":"1","3":"FALSE","4":"25","5":"HighSchoolOrCollege","6":"G","7":"0.450502705"},{"1":"438","2":"1","3":"FALSE","4":"43","5":"Graduate","6":"D","7":"0.637366470"},{"1":"439","2":"1","3":"FALSE","4":"35","5":"HighSchoolOrCollege","6":"I","7":"0.930702522"},{"1":"440","2":"1","3":"FALSE","4":"32","5":"HighSchoolOrCollege","6":"H","7":"0.049076886"},{"1":"441","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"C","7":"0.800759302"},{"1":"442","2":"1","3":"FALSE","4":"27","5":"Bachelors","6":"J","7":"0.523649971"},{"1":"443","2":"1","3":"FALSE","4":"56","5":"HighSchoolOrCollege","6":"F","7":"0.758121962"},{"1":"444","2":"1","3":"FALSE","4":"30","5":"Graduate","6":"H","7":"0.048951659"},{"1":"445","2":"1","3":"FALSE","4":"23","5":"Bachelors","6":"B","7":"0.496667064"},{"1":"446","2":"1","3":"FALSE","4":"31","5":"Graduate","6":"B","7":"0.154285175"},{"1":"447","2":"1","3":"FALSE","4":"49","5":"Graduate","6":"G","7":"0.689153128"},{"1":"448","2":"1","3":"FALSE","4":"28","5":"Graduate","6":"E","7":"0.924288993"},{"1":"449","2":"1","3":"FALSE","4":"41","5":"Graduate","6":"H","7":"0.392066569"},{"1":"450","2":"1","3":"FALSE","4":"35","5":"HighSchoolOrCollege","6":"A","7":"0.504323829"},{"1":"451","2":"1","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"G","7":"0.164418633"},{"1":"452","2":"1","3":"FALSE","4":"18","5":"HighSchoolOrCollege","6":"J","7":"0.742684694"},{"1":"453","2":"1","3":"FALSE","4":"35","5":"HighSchoolOrCollege","6":"H","7":"0.811967182"},{"1":"454","2":"1","3":"FALSE","4":"43","5":"Bachelors","6":"B","7":"0.249578287"},{"1":"455","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"F","7":"0.158418515"},{"1":"456","2":"1","3":"FALSE","4":"25","5":"HighSchoolOrCollege","6":"H","7":"0.685091778"},{"1":"457","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"F","7":"0.151671229"},{"1":"458","2":"1","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"A","7":"0.312528351"},{"1":"459","2":"1","3":"FALSE","4":"18","5":"Bachelors","6":"J","7":"0.344762529"},{"1":"460","2":"1","3":"FALSE","4":"37","5":"Bachelors","6":"J","7":"0.969102133"},{"1":"461","2":"1","3":"FALSE","4":"55","5":"Bachelors","6":"D","7":"0.302215803"},{"1":"462","2":"1","3":"FALSE","4":"60","5":"Low","6":"H","7":"0.773790326"},{"1":"463","2":"1","3":"FALSE","4":"42","5":"Graduate","6":"F","7":"0.353252364"},{"1":"464","2":"1","3":"FALSE","4":"31","5":"Graduate","6":"C","7":"0.923037343"},{"1":"465","2":"1","3":"FALSE","4":"29","5":"HighSchoolOrCollege","6":"J","7":"0.329111154"},{"1":"466","2":"1","3":"FALSE","4":"20","5":"HighSchoolOrCollege","6":"I","7":"0.191165293"},{"1":"467","2":"1","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"C","7":"0.586290946"},{"1":"468","2":"1","3":"FALSE","4":"40","5":"HighSchoolOrCollege","6":"J","7":"0.451895190"},{"1":"469","2":"1","3":"FALSE","4":"26","5":"Bachelors","6":"H","7":"0.554244414"},{"1":"470","2":"1","3":"FALSE","4":"18","5":"HighSchoolOrCollege","6":"J","7":"0.679944615"},{"1":"471","2":"1","3":"FALSE","4":"36","5":"Graduate","6":"J","7":"0.039582663"},{"1":"472","2":"1","3":"FALSE","4":"59","5":"Graduate","6":"E","7":"0.941687305"},{"1":"473","2":"1","3":"FALSE","4":"60","5":"Bachelors","6":"B","7":"0.614071428"},{"1":"474","2":"1","3":"FALSE","4":"49","5":"Graduate","6":"I","7":"0.088574034"},{"1":"475","2":"1","3":"FALSE","4":"24","5":"Graduate","6":"E","7":"0.237641609"},{"1":"476","2":"1","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"C","7":"0.094335508"},{"1":"477","2":"1","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"B","7":"0.383485068"},{"1":"478","2":"1","3":"FALSE","4":"58","5":"Bachelors","6":"D","7":"0.495874155"},{"1":"479","2":"1","3":"FALSE","4":"58","5":"HighSchoolOrCollege","6":"A","7":"0.753570226"},{"1":"480","2":"1","3":"FALSE","4":"39","5":"HighSchoolOrCollege","6":"B","7":"0.211241597"},{"1":"481","2":"1","3":"FALSE","4":"44","5":"Low","6":"B","7":"0.563457797"},{"1":"482","2":"1","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"I","7":"0.012329643"},{"1":"483","2":"1","3":"FALSE","4":"36","5":"Graduate","6":"J","7":"0.209746249"},{"1":"484","2":"1","3":"FALSE","4":"42","5":"Bachelors","6":"B","7":"0.936547208"},{"1":"485","2":"1","3":"FALSE","4":"28","5":"Low","6":"F","7":"0.240426830"},{"1":"486","2":"1","3":"FALSE","4":"29","5":"Low","6":"G","7":"0.020387190"},{"1":"487","2":"1","3":"FALSE","4":"49","5":"Bachelors","6":"I","7":"0.471347147"},{"1":"488","2":"1","3":"FALSE","4":"51","5":"HighSchoolOrCollege","6":"F","7":"0.770104322"},{"1":"489","2":"1","3":"FALSE","4":"24","5":"Bachelors","6":"A","7":"0.107608661"},{"1":"490","2":"1","3":"FALSE","4":"46","5":"HighSchoolOrCollege","6":"D","7":"0.008404856"},{"1":"491","2":"1","3":"FALSE","4":"19","5":"Bachelors","6":"B","7":"0.843920569"},{"1":"492","2":"1","3":"FALSE","4":"58","5":"Bachelors","6":"I","7":"0.364100624"},{"1":"493","2":"1","3":"FALSE","4":"29","5":"Bachelors","6":"I","7":"0.641308283"},{"1":"494","2":"1","3":"FALSE","4":"40","5":"HighSchoolOrCollege","6":"E","7":"0.149860389"},{"1":"495","2":"1","3":"FALSE","4":"47","5":"HighSchoolOrCollege","6":"H","7":"0.478280008"},{"1":"496","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"F","7":"0.145298865"},{"1":"497","2":"1","3":"FALSE","4":"28","5":"HighSchoolOrCollege","6":"D","7":"0.906250776"},{"1":"498","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"B","7":"0.653874654"},{"1":"499","2":"1","3":"FALSE","4":"28","5":"Graduate","6":"I","7":"0.494442294"},{"1":"500","2":"1","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"C","7":"0.239743189"},{"1":"501","2":"1","3":"FALSE","4":"23","5":"Bachelors","6":"E","7":"0.895202266"},{"1":"502","2":"1","3":"FALSE","4":"18","5":"HighSchoolOrCollege","6":"F","7":"0.597042481"},{"1":"503","2":"1","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"A","7":"0.892482505"},{"1":"504","2":"3","3":"TRUE","4":"35","5":"HighSchoolOrCollege","6":"C","7":"0.108711953"},{"1":"505","2":"3","3":"TRUE","4":"45","5":"HighSchoolOrCollege","6":"F","7":"0.466477753"},{"1":"506","2":"3","3":"TRUE","4":"34","5":"Graduate","6":"E","7":"0.602514117"},{"1":"507","2":"3","3":"TRUE","4":"34","5":"Low","6":"G","7":"0.293051648"},{"1":"508","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"F","7":"0.879726550"},{"1":"509","2":"3","3":"TRUE","4":"58","5":"HighSchoolOrCollege","6":"C","7":"0.705961036"},{"1":"510","2":"3","3":"TRUE","4":"25","5":"HighSchoolOrCollege","6":"G","7":"0.716063608"},{"1":"511","2":"3","3":"TRUE","4":"27","5":"HighSchoolOrCollege","6":"C","7":"0.173537994"},{"1":"512","2":"3","3":"TRUE","4":"48","5":"HighSchoolOrCollege","6":"F","7":"0.662403270"},{"1":"513","2":"3","3":"TRUE","4":"57","5":"HighSchoolOrCollege","6":"H","7":"0.306487271"},{"1":"514","2":"3","3":"TRUE","4":"41","5":"HighSchoolOrCollege","6":"E","7":"0.896797286"},{"1":"515","2":"3","3":"TRUE","4":"32","5":"HighSchoolOrCollege","6":"H","7":"0.414908990"},{"1":"516","2":"3","3":"TRUE","4":"22","5":"HighSchoolOrCollege","6":"A","7":"0.369711957"},{"1":"517","2":"3","3":"TRUE","4":"35","5":"HighSchoolOrCollege","6":"I","7":"0.460451549"},{"1":"518","2":"3","3":"TRUE","4":"44","5":"HighSchoolOrCollege","6":"A","7":"0.379599106"},{"1":"519","2":"3","3":"TRUE","4":"18","5":"HighSchoolOrCollege","6":"E","7":"0.974802854"},{"1":"520","2":"3","3":"TRUE","4":"40","5":"Bachelors","6":"H","7":"0.154725513"},{"1":"521","2":"3","3":"TRUE","4":"39","5":"HighSchoolOrCollege","6":"I","7":"0.477456741"},{"1":"522","2":"3","3":"TRUE","4":"20","5":"Low","6":"E","7":"0.277699434"},{"1":"523","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"D","7":"0.803187270"},{"1":"524","2":"3","3":"TRUE","4":"33","5":"Bachelors","6":"C","7":"0.262933648"},{"1":"525","2":"3","3":"TRUE","4":"55","5":"HighSchoolOrCollege","6":"D","7":"0.010173110"},{"1":"526","2":"3","3":"TRUE","4":"25","5":"HighSchoolOrCollege","6":"H","7":"0.703025703"},{"1":"527","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"F","7":"0.543392106"},{"1":"528","2":"3","3":"TRUE","4":"44","5":"HighSchoolOrCollege","6":"C","7":"0.008329855"},{"1":"529","2":"3","3":"TRUE","4":"27","5":"Graduate","6":"D","7":"0.568405413"},{"1":"530","2":"3","3":"TRUE","4":"42","5":"HighSchoolOrCollege","6":"A","7":"0.585489943"},{"1":"531","2":"3","3":"TRUE","4":"54","5":"HighSchoolOrCollege","6":"D","7":"0.134122197"},{"1":"532","2":"3","3":"TRUE","4":"51","5":"Graduate","6":"B","7":"0.303479796"},{"1":"533","2":"3","3":"TRUE","4":"51","5":"HighSchoolOrCollege","6":"E","7":"0.504013735"},{"1":"534","2":"3","3":"TRUE","4":"50","5":"Bachelors","6":"F","7":"0.298257944"},{"1":"535","2":"3","3":"TRUE","4":"46","5":"Bachelors","6":"H","7":"0.428775106"},{"1":"536","2":"3","3":"TRUE","4":"46","5":"HighSchoolOrCollege","6":"J","7":"0.137689076"},{"1":"537","2":"3","3":"TRUE","4":"42","5":"HighSchoolOrCollege","6":"D","7":"0.969868254"},{"1":"538","2":"3","3":"TRUE","4":"22","5":"Bachelors","6":"C","7":"0.617029061"},{"1":"539","2":"3","3":"TRUE","4":"47","5":"Low","6":"C","7":"0.449809053"},{"1":"540","2":"3","3":"TRUE","4":"44","5":"Bachelors","6":"C","7":"0.820897579"},{"1":"541","2":"3","3":"TRUE","4":"49","5":"HighSchoolOrCollege","6":"D","7":"0.778143316"},{"1":"542","2":"3","3":"TRUE","4":"27","5":"Bachelors","6":"D","7":"0.149424876"},{"1":"543","2":"3","3":"TRUE","4":"54","5":"HighSchoolOrCollege","6":"D","7":"0.557004306"},{"1":"544","2":"3","3":"TRUE","4":"18","5":"Bachelors","6":"G","7":"0.574526753"},{"1":"545","2":"3","3":"TRUE","4":"18","5":"HighSchoolOrCollege","6":"B","7":"0.632529807"},{"1":"546","2":"3","3":"TRUE","4":"60","5":"Bachelors","6":"H","7":"0.061282494"},{"1":"547","2":"3","3":"TRUE","4":"20","5":"Bachelors","6":"J","7":"0.065619544"},{"1":"548","2":"3","3":"TRUE","4":"54","5":"Bachelors","6":"H","7":"0.061410383"},{"1":"549","2":"3","3":"TRUE","4":"40","5":"HighSchoolOrCollege","6":"F","7":"0.211903193"},{"1":"550","2":"3","3":"TRUE","4":"46","5":"HighSchoolOrCollege","6":"J","7":"0.420901962"},{"1":"551","2":"3","3":"TRUE","4":"58","5":"Graduate","6":"D","7":"0.492572167"},{"1":"552","2":"3","3":"TRUE","4":"60","5":"Graduate","6":"E","7":"0.057542458"},{"1":"553","2":"3","3":"TRUE","4":"28","5":"Low","6":"A","7":"0.100871333"},{"1":"554","2":"3","3":"TRUE","4":"29","5":"HighSchoolOrCollege","6":"C","7":"0.551760119"},{"1":"555","2":"3","3":"TRUE","4":"23","5":"HighSchoolOrCollege","6":"J","7":"0.604777434"},{"1":"556","2":"3","3":"TRUE","4":"30","5":"HighSchoolOrCollege","6":"B","7":"0.626384882"},{"1":"557","2":"3","3":"TRUE","4":"18","5":"HighSchoolOrCollege","6":"D","7":"0.540412762"},{"1":"558","2":"3","3":"TRUE","4":"36","5":"HighSchoolOrCollege","6":"I","7":"0.805252435"},{"1":"559","2":"3","3":"TRUE","4":"60","5":"Bachelors","6":"A","7":"0.684335696"},{"1":"560","2":"3","3":"TRUE","4":"46","5":"HighSchoolOrCollege","6":"D","7":"0.240288209"},{"1":"561","2":"3","3":"TRUE","4":"51","5":"HighSchoolOrCollege","6":"A","7":"0.248589550"},{"1":"562","2":"3","3":"TRUE","4":"49","5":"Bachelors","6":"J","7":"0.329193948"},{"1":"563","2":"3","3":"TRUE","4":"41","5":"Bachelors","6":"I","7":"0.970166283"},{"1":"564","2":"3","3":"TRUE","4":"38","5":"Bachelors","6":"G","7":"0.842958885"},{"1":"565","2":"3","3":"TRUE","4":"56","5":"Bachelors","6":"C","7":"0.906449778"},{"1":"566","2":"3","3":"TRUE","4":"22","5":"HighSchoolOrCollege","6":"C","7":"0.401423701"},{"1":"567","2":"3","3":"TRUE","4":"50","5":"Low","6":"G","7":"0.865316562"},{"1":"568","2":"3","3":"TRUE","4":"52","5":"Low","6":"C","7":"0.812872098"},{"1":"569","2":"3","3":"TRUE","4":"20","5":"HighSchoolOrCollege","6":"C","7":"0.650812395"},{"1":"570","2":"3","3":"TRUE","4":"49","5":"Bachelors","6":"C","7":"0.539205582"},{"1":"571","2":"3","3":"TRUE","4":"57","5":"HighSchoolOrCollege","6":"D","7":"0.368212580"},{"1":"572","2":"3","3":"TRUE","4":"23","5":"HighSchoolOrCollege","6":"J","7":"0.681954474"},{"1":"573","2":"3","3":"TRUE","4":"49","5":"Graduate","6":"I","7":"0.978406157"},{"1":"574","2":"3","3":"TRUE","4":"57","5":"HighSchoolOrCollege","6":"J","7":"0.856878184"},{"1":"575","2":"3","3":"TRUE","4":"38","5":"HighSchoolOrCollege","6":"D","7":"0.837129390"},{"1":"576","2":"3","3":"TRUE","4":"23","5":"Graduate","6":"D","7":"0.968722072"},{"1":"577","2":"3","3":"TRUE","4":"19","5":"HighSchoolOrCollege","6":"G","7":"0.936591650"},{"1":"578","2":"3","3":"TRUE","4":"21","5":"Bachelors","6":"E","7":"0.982847770"},{"1":"579","2":"2","3":"FALSE","4":"48","5":"Bachelors","6":"F","7":"0.768714853"},{"1":"580","2":"2","3":"FALSE","4":"29","5":"HighSchoolOrCollege","6":"G","7":"0.664331370"},{"1":"581","2":"2","3":"FALSE","4":"60","5":"Graduate","6":"J","7":"0.417992624"},{"1":"582","2":"2","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"D","7":"0.468741471"},{"1":"583","2":"2","3":"FALSE","4":"50","5":"Graduate","6":"J","7":"0.568154176"},{"1":"584","2":"2","3":"FALSE","4":"36","5":"Bachelors","6":"H","7":"0.130737765"},{"1":"585","2":"2","3":"FALSE","4":"34","5":"Bachelors","6":"D","7":"0.265413241"},{"1":"586","2":"2","3":"FALSE","4":"41","5":"HighSchoolOrCollege","6":"B","7":"0.008705951"},{"1":"587","2":"2","3":"FALSE","4":"51","5":"HighSchoolOrCollege","6":"F","7":"0.444743825"},{"1":"588","2":"2","3":"FALSE","4":"45","5":"HighSchoolOrCollege","6":"I","7":"0.412038273"},{"1":"589","2":"2","3":"FALSE","4":"23","5":"HighSchoolOrCollege","6":"I","7":"0.975273877"},{"1":"590","2":"2","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"A","7":"0.448569158"},{"1":"591","2":"2","3":"FALSE","4":"54","5":"Bachelors","6":"H","7":"0.263048698"},{"1":"592","2":"2","3":"FALSE","4":"32","5":"Graduate","6":"A","7":"0.221265110"},{"1":"593","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"A","7":"0.919710751"},{"1":"594","2":"2","3":"FALSE","4":"37","5":"Graduate","6":"F","7":"0.278112333"},{"1":"595","2":"2","3":"FALSE","4":"27","5":"Low","6":"C","7":"0.739359987"},{"1":"596","2":"2","3":"FALSE","4":"19","5":"Graduate","6":"F","7":"0.967555161"},{"1":"597","2":"2","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"I","7":"0.408345757"},{"1":"598","2":"2","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"H","7":"0.171959185"},{"1":"599","2":"2","3":"FALSE","4":"32","5":"HighSchoolOrCollege","6":"G","7":"0.998644049"},{"1":"600","2":"2","3":"FALSE","4":"49","5":"Bachelors","6":"C","7":"0.791591163"},{"1":"601","2":"2","3":"FALSE","4":"32","5":"HighSchoolOrCollege","6":"E","7":"0.585843678"},{"1":"602","2":"2","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"C","7":"0.853874668"},{"1":"603","2":"2","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"E","7":"0.751229979"},{"1":"604","2":"2","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"E","7":"0.875113575"},{"1":"605","2":"2","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"D","7":"0.705971019"},{"1":"606","2":"2","3":"FALSE","4":"28","5":"HighSchoolOrCollege","6":"H","7":"0.370138058"},{"1":"607","2":"2","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"I","7":"0.370246957"},{"1":"608","2":"2","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"B","7":"0.358497175"},{"1":"609","2":"2","3":"FALSE","4":"42","5":"Bachelors","6":"H","7":"0.213011118"},{"1":"610","2":"2","3":"FALSE","4":"58","5":"Graduate","6":"G","7":"0.526105544"},{"1":"611","2":"2","3":"FALSE","4":"18","5":"HighSchoolOrCollege","6":"J","7":"0.734927742"},{"1":"612","2":"2","3":"FALSE","4":"41","5":"Bachelors","6":"J","7":"0.034839253"},{"1":"613","2":"2","3":"FALSE","4":"46","5":"HighSchoolOrCollege","6":"E","7":"0.541632245"},{"1":"614","2":"2","3":"FALSE","4":"45","5":"HighSchoolOrCollege","6":"H","7":"0.059062573"},{"1":"615","2":"2","3":"FALSE","4":"36","5":"Low","6":"H","7":"0.796648610"},{"1":"616","2":"2","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"J","7":"0.544782269"},{"1":"617","2":"2","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"A","7":"0.965741735"},{"1":"618","2":"2","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"E","7":"0.089915241"},{"1":"619","2":"2","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"E","7":"0.025245948"},{"1":"620","2":"2","3":"FALSE","4":"31","5":"Bachelors","6":"A","7":"0.673541165"},{"1":"621","2":"2","3":"FALSE","4":"34","5":"HighSchoolOrCollege","6":"H","7":"0.738766851"},{"1":"622","2":"2","3":"FALSE","4":"54","5":"Bachelors","6":"J","7":"0.719188185"},{"1":"623","2":"2","3":"FALSE","4":"56","5":"HighSchoolOrCollege","6":"B","7":"0.576129491"},{"1":"624","2":"2","3":"FALSE","4":"31","5":"Bachelors","6":"C","7":"0.916163673"},{"1":"625","2":"2","3":"FALSE","4":"35","5":"HighSchoolOrCollege","6":"G","7":"0.604580267"},{"1":"626","2":"2","3":"FALSE","4":"28","5":"Bachelors","6":"D","7":"0.793880506"},{"1":"627","2":"2","3":"FALSE","4":"60","5":"Bachelors","6":"H","7":"0.261891320"},{"1":"628","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"J","7":"0.840352040"},{"1":"629","2":"2","3":"FALSE","4":"59","5":"HighSchoolOrCollege","6":"I","7":"0.388526260"},{"1":"630","2":"2","3":"FALSE","4":"30","5":"Bachelors","6":"G","7":"0.653881117"},{"1":"631","2":"2","3":"FALSE","4":"56","5":"HighSchoolOrCollege","6":"G","7":"0.217949026"},{"1":"632","2":"2","3":"FALSE","4":"38","5":"Bachelors","6":"J","7":"0.243164359"},{"1":"633","2":"2","3":"FALSE","4":"32","5":"Graduate","6":"H","7":"0.227976736"},{"1":"634","2":"2","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"G","7":"0.915889403"},{"1":"635","2":"2","3":"FALSE","4":"33","5":"Graduate","6":"J","7":"0.447001762"},{"1":"636","2":"2","3":"FALSE","4":"39","5":"HighSchoolOrCollege","6":"A","7":"0.104168464"},{"1":"637","2":"2","3":"FALSE","4":"23","5":"Bachelors","6":"F","7":"0.573248725"},{"1":"638","2":"2","3":"FALSE","4":"48","5":"HighSchoolOrCollege","6":"I","7":"0.221999544"},{"1":"639","2":"2","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"H","7":"0.527164931"},{"1":"640","2":"2","3":"FALSE","4":"24","5":"Bachelors","6":"D","7":"0.686982312"},{"1":"641","2":"2","3":"FALSE","4":"25","5":"HighSchoolOrCollege","6":"E","7":"0.396350271"},{"1":"642","2":"2","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"D","7":"0.261732596"},{"1":"643","2":"2","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"A","7":"0.619875624"},{"1":"644","2":"2","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"A","7":"0.130781968"},{"1":"645","2":"2","3":"FALSE","4":"33","5":"Graduate","6":"E","7":"0.134078822"},{"1":"646","2":"2","3":"FALSE","4":"36","5":"Graduate","6":"I","7":"0.962520694"},{"1":"647","2":"2","3":"FALSE","4":"54","5":"Low","6":"A","7":"0.665589674"},{"1":"648","2":"2","3":"FALSE","4":"49","5":"Bachelors","6":"B","7":"0.634994302"},{"1":"649","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"A","7":"0.042960665"},{"1":"650","2":"2","3":"FALSE","4":"31","5":"Graduate","6":"C","7":"0.846974117"},{"1":"651","2":"2","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"E","7":"0.047571871"},{"1":"652","2":"2","3":"FALSE","4":"30","5":"Bachelors","6":"B","7":"0.665307968"},{"1":"653","2":"2","3":"FALSE","4":"40","5":"HighSchoolOrCollege","6":"J","7":"0.395208380"},{"1":"654","2":"2","3":"FALSE","4":"19","5":"Bachelors","6":"C","7":"0.872069831"},{"1":"655","2":"2","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"F","7":"0.380975259"},{"1":"656","2":"2","3":"FALSE","4":"41","5":"Bachelors","6":"F","7":"0.315950154"},{"1":"657","2":"2","3":"FALSE","4":"46","5":"HighSchoolOrCollege","6":"B","7":"0.718729520"},{"1":"658","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"D","7":"0.675085656"},{"1":"659","2":"2","3":"FALSE","4":"49","5":"Graduate","6":"H","7":"0.741834688"},{"1":"660","2":"2","3":"FALSE","4":"30","5":"Bachelors","6":"D","7":"0.354910317"},{"1":"661","2":"2","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"H","7":"0.056860736"},{"1":"662","2":"2","3":"FALSE","4":"47","5":"Graduate","6":"H","7":"0.038611164"},{"1":"663","2":"2","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"D","7":"0.937254935"},{"1":"664","2":"2","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"H","7":"0.270124892"},{"1":"665","2":"2","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"G","7":"0.172855291"},{"1":"666","2":"2","3":"FALSE","4":"32","5":"Bachelors","6":"J","7":"0.328627654"},{"1":"667","2":"2","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"F","7":"0.037996177"},{"1":"668","2":"2","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"H","7":"0.594912020"},{"1":"669","2":"2","3":"FALSE","4":"28","5":"HighSchoolOrCollege","6":"B","7":"0.183180758"},{"1":"670","2":"2","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"F","7":"0.395789610"},{"1":"671","2":"2","3":"FALSE","4":"51","5":"HighSchoolOrCollege","6":"C","7":"0.270624129"},{"1":"672","2":"1","3":"FALSE","4":"22","5":"Bachelors","6":"I","7":"0.470322266"},{"1":"673","2":"1","3":"FALSE","4":"23","5":"Low","6":"I","7":"0.051798314"},{"1":"674","2":"1","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"F","7":"0.543992757"},{"1":"675","2":"1","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"A","7":"0.545251458"},{"1":"676","2":"1","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"J","7":"0.068612756"},{"1":"677","2":"1","3":"FALSE","4":"47","5":"HighSchoolOrCollege","6":"A","7":"0.137446199"},{"1":"678","2":"1","3":"FALSE","4":"38","5":"Bachelors","6":"D","7":"0.906011120"},{"1":"679","2":"1","3":"FALSE","4":"54","5":"Graduate","6":"F","7":"0.980481087"},{"1":"680","2":"1","3":"FALSE","4":"48","5":"Low","6":"C","7":"0.141341978"},{"1":"681","2":"1","3":"FALSE","4":"51","5":"HighSchoolOrCollege","6":"G","7":"0.440943662"},{"1":"682","2":"1","3":"FALSE","4":"32","5":"HighSchoolOrCollege","6":"B","7":"0.392351739"},{"1":"683","2":"1","3":"FALSE","4":"31","5":"Graduate","6":"G","7":"0.241410497"},{"1":"684","2":"1","3":"FALSE","4":"30","5":"Graduate","6":"C","7":"0.411069142"},{"1":"685","2":"1","3":"FALSE","4":"42","5":"Bachelors","6":"A","7":"0.599260494"},{"1":"686","2":"1","3":"FALSE","4":"21","5":"Bachelors","6":"C","7":"0.786524128"},{"1":"687","2":"1","3":"FALSE","4":"48","5":"HighSchoolOrCollege","6":"G","7":"0.954361914"},{"1":"688","2":"1","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"J","7":"0.434048369"},{"1":"689","2":"1","3":"FALSE","4":"49","5":"Bachelors","6":"G","7":"0.423558750"},{"1":"690","2":"1","3":"FALSE","4":"50","5":"Low","6":"C","7":"0.467859308"},{"1":"691","2":"1","3":"FALSE","4":"36","5":"Graduate","6":"D","7":"0.609420425"},{"1":"692","2":"1","3":"FALSE","4":"54","5":"Graduate","6":"C","7":"0.560883015"},{"1":"693","2":"1","3":"FALSE","4":"39","5":"HighSchoolOrCollege","6":"B","7":"0.402956862"},{"1":"694","2":"1","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"J","7":"0.391601344"},{"1":"695","2":"1","3":"FALSE","4":"55","5":"Bachelors","6":"H","7":"0.542864790"},{"1":"696","2":"1","3":"FALSE","4":"44","5":"Bachelors","6":"H","7":"0.452363587"},{"1":"697","2":"1","3":"FALSE","4":"26","5":"HighSchoolOrCollege","6":"A","7":"0.976239224"},{"1":"698","2":"1","3":"FALSE","4":"24","5":"Bachelors","6":"C","7":"0.674877675"},{"1":"699","2":"1","3":"FALSE","4":"33","5":"HighSchoolOrCollege","6":"A","7":"0.055989127"},{"1":"700","2":"1","3":"FALSE","4":"28","5":"HighSchoolOrCollege","6":"I","7":"0.907301342"},{"1":"701","2":"1","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"G","7":"0.440877016"},{"1":"702","2":"1","3":"FALSE","4":"49","5":"Bachelors","6":"J","7":"0.288396985"},{"1":"703","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"F","7":"0.609793327"},{"1":"704","2":"1","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"C","7":"0.746716458"},{"1":"705","2":"1","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"E","7":"0.692283941"},{"1":"706","2":"1","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"I","7":"0.404529522"},{"1":"707","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"F","7":"0.275811473"},{"1":"708","2":"1","3":"FALSE","4":"23","5":"HighSchoolOrCollege","6":"J","7":"0.570765537"},{"1":"709","2":"1","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"G","7":"0.100837923"},{"1":"710","2":"1","3":"FALSE","4":"50","5":"Bachelors","6":"F","7":"0.324954076"},{"1":"711","2":"1","3":"FALSE","4":"27","5":"Bachelors","6":"D","7":"0.942801579"},{"1":"712","2":"1","3":"FALSE","4":"51","5":"HighSchoolOrCollege","6":"C","7":"0.325503058"},{"1":"713","2":"1","3":"FALSE","4":"22","5":"Bachelors","6":"D","7":"0.118853550"},{"1":"714","2":"1","3":"FALSE","4":"50","5":"Graduate","6":"C","7":"0.905015948"},{"1":"715","2":"1","3":"FALSE","4":"58","5":"Graduate","6":"D","7":"0.373642689"},{"1":"716","2":"1","3":"FALSE","4":"20","5":"Bachelors","6":"H","7":"0.132319548"},{"1":"717","2":"1","3":"FALSE","4":"36","5":"HighSchoolOrCollege","6":"G","7":"0.318139199"},{"1":"718","2":"1","3":"FALSE","4":"19","5":"Graduate","6":"E","7":"0.839634412"},{"1":"719","2":"1","3":"FALSE","4":"47","5":"Low","6":"F","7":"0.960391982"},{"1":"720","2":"1","3":"FALSE","4":"56","5":"Graduate","6":"C","7":"0.930475595"},{"1":"721","2":"1","3":"FALSE","4":"24","5":"Bachelors","6":"I","7":"0.232407811"},{"1":"722","2":"1","3":"FALSE","4":"35","5":"HighSchoolOrCollege","6":"E","7":"0.634111119"},{"1":"723","2":"1","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"E","7":"0.315916767"},{"1":"724","2":"1","3":"FALSE","4":"50","5":"Low","6":"B","7":"0.241785645"},{"1":"725","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"A","7":"0.624709649"},{"1":"726","2":"1","3":"FALSE","4":"20","5":"HighSchoolOrCollege","6":"A","7":"0.502901494"},{"1":"727","2":"1","3":"FALSE","4":"58","5":"Bachelors","6":"J","7":"0.945430646"},{"1":"728","2":"1","3":"FALSE","4":"38","5":"Low","6":"H","7":"0.037220396"},{"1":"729","2":"1","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"H","7":"0.465075787"},{"1":"730","2":"1","3":"FALSE","4":"48","5":"HighSchoolOrCollege","6":"A","7":"0.748473896"},{"1":"731","2":"1","3":"FALSE","4":"44","5":"Bachelors","6":"B","7":"0.619208795"},{"1":"732","2":"1","3":"FALSE","4":"41","5":"Graduate","6":"A","7":"0.240042805"},{"1":"733","2":"1","3":"FALSE","4":"50","5":"Low","6":"J","7":"0.298490597"},{"1":"734","2":"1","3":"FALSE","4":"38","5":"Bachelors","6":"H","7":"0.522010625"},{"1":"735","2":"1","3":"FALSE","4":"51","5":"Low","6":"F","7":"0.063256748"},{"1":"736","2":"1","3":"FALSE","4":"46","5":"HighSchoolOrCollege","6":"B","7":"0.130649539"},{"1":"737","2":"1","3":"FALSE","4":"43","5":"Bachelors","6":"F","7":"0.933937799"},{"1":"738","2":"1","3":"FALSE","4":"23","5":"Bachelors","6":"G","7":"0.879171582"},{"1":"739","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"I","7":"0.682228410"},{"1":"740","2":"1","3":"FALSE","4":"41","5":"HighSchoolOrCollege","6":"A","7":"0.409040073"},{"1":"741","2":"1","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"C","7":"0.187180439"},{"1":"742","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"I","7":"0.091096884"},{"1":"743","2":"1","3":"FALSE","4":"51","5":"Bachelors","6":"C","7":"0.077442954"},{"1":"744","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"G","7":"0.447644949"},{"1":"745","2":"1","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"J","7":"0.103826560"},{"1":"746","2":"1","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"G","7":"0.588102942"},{"1":"747","2":"1","3":"FALSE","4":"36","5":"HighSchoolOrCollege","6":"A","7":"0.066469676"},{"1":"748","2":"1","3":"FALSE","4":"26","5":"Graduate","6":"E","7":"0.874661744"},{"1":"749","2":"1","3":"FALSE","4":"58","5":"HighSchoolOrCollege","6":"G","7":"0.017790641"},{"1":"750","2":"1","3":"FALSE","4":"30","5":"Bachelors","6":"G","7":"0.262320121"},{"1":"751","2":"1","3":"FALSE","4":"32","5":"Graduate","6":"E","7":"0.772170080"},{"1":"752","2":"1","3":"FALSE","4":"47","5":"Graduate","6":"E","7":"0.736149674"},{"1":"753","2":"1","3":"FALSE","4":"21","5":"Bachelors","6":"J","7":"0.339503386"},{"1":"754","2":"1","3":"FALSE","4":"34","5":"Bachelors","6":"A","7":"0.175659750"},{"1":"755","2":"1","3":"FALSE","4":"58","5":"HighSchoolOrCollege","6":"C","7":"0.414137953"},{"1":"756","2":"3","3":"TRUE","4":"28","5":"Low","6":"C","7":"0.933334008"},{"1":"757","2":"3","3":"TRUE","4":"58","5":"HighSchoolOrCollege","6":"I","7":"0.797833033"},{"1":"758","2":"3","3":"TRUE","4":"56","5":"HighSchoolOrCollege","6":"C","7":"0.000204000"},{"1":"759","2":"3","3":"TRUE","4":"54","5":"Graduate","6":"I","7":"0.880468848"},{"1":"760","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"H","7":"0.751787305"},{"1":"761","2":"3","3":"TRUE","4":"29","5":"Low","6":"H","7":"0.784450700"},{"1":"762","2":"3","3":"TRUE","4":"22","5":"HighSchoolOrCollege","6":"C","7":"0.815990235"},{"1":"763","2":"3","3":"TRUE","4":"27","5":"Graduate","6":"F","7":"0.338259596"},{"1":"764","2":"3","3":"TRUE","4":"52","5":"HighSchoolOrCollege","6":"C","7":"0.125648650"},{"1":"765","2":"3","3":"TRUE","4":"29","5":"Graduate","6":"E","7":"0.740682908"},{"1":"766","2":"3","3":"TRUE","4":"38","5":"HighSchoolOrCollege","6":"F","7":"0.573952621"},{"1":"767","2":"3","3":"TRUE","4":"18","5":"HighSchoolOrCollege","6":"J","7":"0.268937352"},{"1":"768","2":"3","3":"TRUE","4":"28","5":"HighSchoolOrCollege","6":"G","7":"0.808558886"},{"1":"769","2":"3","3":"TRUE","4":"28","5":"Graduate","6":"D","7":"0.289569911"},{"1":"770","2":"3","3":"TRUE","4":"32","5":"Bachelors","6":"G","7":"0.623466515"},{"1":"771","2":"3","3":"TRUE","4":"51","5":"Low","6":"J","7":"0.246096940"},{"1":"772","2":"3","3":"TRUE","4":"38","5":"Graduate","6":"A","7":"0.806871224"},{"1":"773","2":"3","3":"TRUE","4":"23","5":"Low","6":"E","7":"0.546776461"},{"1":"774","2":"3","3":"TRUE","4":"32","5":"HighSchoolOrCollege","6":"J","7":"0.854523316"},{"1":"775","2":"3","3":"TRUE","4":"41","5":"HighSchoolOrCollege","6":"J","7":"0.453217413"},{"1":"776","2":"3","3":"TRUE","4":"34","5":"Bachelors","6":"D","7":"0.321067111"},{"1":"777","2":"3","3":"TRUE","4":"48","5":"HighSchoolOrCollege","6":"D","7":"0.112504967"},{"1":"778","2":"3","3":"TRUE","4":"18","5":"HighSchoolOrCollege","6":"J","7":"0.449689991"},{"1":"779","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"G","7":"0.193751151"},{"1":"780","2":"3","3":"TRUE","4":"35","5":"Low","6":"H","7":"0.442987521"},{"1":"781","2":"3","3":"TRUE","4":"42","5":"HighSchoolOrCollege","6":"J","7":"0.141104200"},{"1":"782","2":"3","3":"TRUE","4":"30","5":"Bachelors","6":"J","7":"0.834580963"},{"1":"783","2":"3","3":"TRUE","4":"47","5":"HighSchoolOrCollege","6":"B","7":"0.377309384"},{"1":"784","2":"3","3":"TRUE","4":"54","5":"HighSchoolOrCollege","6":"D","7":"0.517238511"},{"1":"785","2":"3","3":"TRUE","4":"55","5":"HighSchoolOrCollege","6":"I","7":"0.747594455"},{"1":"786","2":"3","3":"TRUE","4":"23","5":"HighSchoolOrCollege","6":"B","7":"0.001365799"},{"1":"787","2":"3","3":"TRUE","4":"37","5":"HighSchoolOrCollege","6":"H","7":"0.145144740"},{"1":"788","2":"3","3":"TRUE","4":"31","5":"HighSchoolOrCollege","6":"A","7":"0.415138085"},{"1":"789","2":"3","3":"TRUE","4":"35","5":"HighSchoolOrCollege","6":"I","7":"0.839157196"},{"1":"790","2":"3","3":"TRUE","4":"55","5":"Low","6":"D","7":"0.706306798"},{"1":"791","2":"3","3":"TRUE","4":"36","5":"HighSchoolOrCollege","6":"G","7":"0.865257446"},{"1":"792","2":"3","3":"TRUE","4":"47","5":"Low","6":"D","7":"0.972081828"},{"1":"793","2":"3","3":"TRUE","4":"40","5":"HighSchoolOrCollege","6":"I","7":"0.695900691"},{"1":"794","2":"3","3":"TRUE","4":"41","5":"Low","6":"B","7":"0.818566502"},{"1":"795","2":"3","3":"TRUE","4":"50","5":"HighSchoolOrCollege","6":"A","7":"0.517422334"},{"1":"796","2":"3","3":"TRUE","4":"58","5":"HighSchoolOrCollege","6":"F","7":"0.430036143"},{"1":"797","2":"3","3":"TRUE","4":"30","5":"HighSchoolOrCollege","6":"J","7":"0.665923892"},{"1":"798","2":"3","3":"TRUE","4":"36","5":"Bachelors","6":"I","7":"0.960081670"},{"1":"799","2":"3","3":"TRUE","4":"49","5":"HighSchoolOrCollege","6":"E","7":"0.992601749"},{"1":"800","2":"3","3":"TRUE","4":"50","5":"Graduate","6":"I","7":"0.027591944"},{"1":"801","2":"3","3":"TRUE","4":"43","5":"Graduate","6":"I","7":"0.490190335"},{"1":"802","2":"3","3":"TRUE","4":"18","5":"Low","6":"J","7":"0.493231932"},{"1":"803","2":"3","3":"TRUE","4":"43","5":"HighSchoolOrCollege","6":"B","7":"0.217382928"},{"1":"804","2":"3","3":"TRUE","4":"18","5":"HighSchoolOrCollege","6":"A","7":"0.468583888"},{"1":"805","2":"3","3":"TRUE","4":"19","5":"HighSchoolOrCollege","6":"I","7":"0.328587955"},{"1":"806","2":"3","3":"TRUE","4":"23","5":"Low","6":"B","7":"0.437718862"},{"1":"807","2":"3","3":"TRUE","4":"27","5":"HighSchoolOrCollege","6":"F","7":"0.033479552"},{"1":"808","2":"3","3":"TRUE","4":"56","5":"HighSchoolOrCollege","6":"E","7":"0.845236200"},{"1":"809","2":"3","3":"TRUE","4":"43","5":"HighSchoolOrCollege","6":"B","7":"0.457280127"},{"1":"810","2":"3","3":"TRUE","4":"46","5":"HighSchoolOrCollege","6":"C","7":"0.144875993"},{"1":"811","2":"3","3":"TRUE","4":"27","5":"Graduate","6":"D","7":"0.030335914"},{"1":"812","2":"3","3":"TRUE","4":"44","5":"HighSchoolOrCollege","6":"F","7":"0.619525261"},{"1":"813","2":"3","3":"TRUE","4":"29","5":"HighSchoolOrCollege","6":"F","7":"0.539387528"},{"1":"814","2":"3","3":"TRUE","4":"54","5":"Bachelors","6":"F","7":"0.441747580"},{"1":"815","2":"3","3":"TRUE","4":"38","5":"HighSchoolOrCollege","6":"F","7":"0.521630433"},{"1":"816","2":"3","3":"TRUE","4":"20","5":"Low","6":"G","7":"0.206406844"},{"1":"817","2":"3","3":"TRUE","4":"35","5":"Low","6":"J","7":"0.501048865"},{"1":"818","2":"3","3":"TRUE","4":"22","5":"HighSchoolOrCollege","6":"F","7":"0.758474429"},{"1":"819","2":"3","3":"TRUE","4":"18","5":"Graduate","6":"C","7":"0.283066289"},{"1":"820","2":"3","3":"TRUE","4":"44","5":"Bachelors","6":"E","7":"0.065357535"},{"1":"821","2":"3","3":"TRUE","4":"35","5":"HighSchoolOrCollege","6":"H","7":"0.053564289"},{"1":"822","2":"3","3":"TRUE","4":"57","5":"HighSchoolOrCollege","6":"B","7":"0.202769644"},{"1":"823","2":"3","3":"TRUE","4":"22","5":"Graduate","6":"A","7":"0.269842118"},{"1":"824","2":"3","3":"TRUE","4":"40","5":"Low","6":"E","7":"0.904248183"},{"1":"825","2":"3","3":"TRUE","4":"26","5":"HighSchoolOrCollege","6":"H","7":"0.780884351"},{"1":"826","2":"3","3":"TRUE","4":"28","5":"Graduate","6":"J","7":"0.610736625"},{"1":"827","2":"3","3":"TRUE","4":"38","5":"HighSchoolOrCollege","6":"G","7":"0.972540960"},{"1":"828","2":"3","3":"TRUE","4":"27","5":"HighSchoolOrCollege","6":"A","7":"0.813680504"},{"1":"829","2":"3","3":"TRUE","4":"26","5":"HighSchoolOrCollege","6":"B","7":"0.280151127"},{"1":"830","2":"3","3":"TRUE","4":"57","5":"Bachelors","6":"G","7":"0.152431791"},{"1":"831","2":"3","3":"TRUE","4":"55","5":"Low","6":"H","7":"0.607698280"},{"1":"832","2":"2","3":"FALSE","4":"47","5":"Low","6":"G","7":"0.249719036"},{"1":"833","2":"2","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"D","7":"0.139770688"},{"1":"834","2":"2","3":"FALSE","4":"24","5":"HighSchoolOrCollege","6":"F","7":"0.408977137"},{"1":"835","2":"2","3":"FALSE","4":"49","5":"Bachelors","6":"D","7":"0.957400017"},{"1":"836","2":"2","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"A","7":"0.201801545"},{"1":"837","2":"2","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"F","7":"0.048428984"},{"1":"838","2":"2","3":"FALSE","4":"52","5":"Bachelors","6":"E","7":"0.221489156"},{"1":"839","2":"2","3":"FALSE","4":"29","5":"Low","6":"G","7":"0.980908737"},{"1":"840","2":"2","3":"FALSE","4":"47","5":"Bachelors","6":"E","7":"0.469113963"},{"1":"841","2":"2","3":"FALSE","4":"57","5":"Graduate","6":"G","7":"0.655361489"},{"1":"842","2":"2","3":"FALSE","4":"39","5":"HighSchoolOrCollege","6":"H","7":"0.636640992"},{"1":"843","2":"2","3":"FALSE","4":"59","5":"Bachelors","6":"H","7":"0.683850663"},{"1":"844","2":"2","3":"FALSE","4":"46","5":"Bachelors","6":"H","7":"0.659909909"},{"1":"845","2":"2","3":"FALSE","4":"40","5":"HighSchoolOrCollege","6":"G","7":"0.234712133"},{"1":"846","2":"2","3":"FALSE","4":"44","5":"Low","6":"J","7":"0.247843267"},{"1":"847","2":"2","3":"FALSE","4":"28","5":"HighSchoolOrCollege","6":"H","7":"0.948917655"},{"1":"848","2":"2","3":"FALSE","4":"34","5":"Graduate","6":"B","7":"0.633519504"},{"1":"849","2":"2","3":"FALSE","4":"30","5":"Bachelors","6":"I","7":"0.828259584"},{"1":"850","2":"2","3":"FALSE","4":"57","5":"Bachelors","6":"C","7":"0.631431974"},{"1":"851","2":"2","3":"FALSE","4":"19","5":"Graduate","6":"D","7":"0.677712189"},{"1":"852","2":"2","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"F","7":"0.300052760"},{"1":"853","2":"2","3":"FALSE","4":"33","5":"HighSchoolOrCollege","6":"H","7":"0.428566270"},{"1":"854","2":"2","3":"FALSE","4":"28","5":"Bachelors","6":"B","7":"0.042899175"},{"1":"855","2":"2","3":"FALSE","4":"56","5":"HighSchoolOrCollege","6":"A","7":"0.547588054"},{"1":"856","2":"2","3":"FALSE","4":"38","5":"HighSchoolOrCollege","6":"J","7":"0.370060753"},{"1":"857","2":"2","3":"FALSE","4":"57","5":"Bachelors","6":"H","7":"0.853049624"},{"1":"858","2":"2","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"J","7":"0.879241610"},{"1":"859","2":"2","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"B","7":"0.713526600"},{"1":"860","2":"2","3":"FALSE","4":"29","5":"HighSchoolOrCollege","6":"D","7":"0.839802108"},{"1":"861","2":"2","3":"FALSE","4":"59","5":"Bachelors","6":"H","7":"0.332054621"},{"1":"862","2":"2","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"H","7":"0.997604884"},{"1":"863","2":"2","3":"FALSE","4":"59","5":"Bachelors","6":"F","7":"0.807449064"},{"1":"864","2":"2","3":"FALSE","4":"49","5":"HighSchoolOrCollege","6":"I","7":"0.416211045"},{"1":"865","2":"2","3":"FALSE","4":"39","5":"HighSchoolOrCollege","6":"F","7":"0.115098336"},{"1":"866","2":"2","3":"FALSE","4":"42","5":"Bachelors","6":"I","7":"0.997670843"},{"1":"867","2":"2","3":"FALSE","4":"35","5":"HighSchoolOrCollege","6":"H","7":"0.709526793"},{"1":"868","2":"2","3":"FALSE","4":"51","5":"HighSchoolOrCollege","6":"I","7":"0.380817450"},{"1":"869","2":"2","3":"FALSE","4":"53","5":"Graduate","6":"I","7":"0.495487226"},{"1":"870","2":"2","3":"FALSE","4":"32","5":"Bachelors","6":"F","7":"0.820903516"},{"1":"871","2":"2","3":"FALSE","4":"48","5":"Graduate","6":"I","7":"0.067887485"},{"1":"872","2":"2","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"C","7":"0.928387676"},{"1":"873","2":"2","3":"FALSE","4":"58","5":"Bachelors","6":"J","7":"0.282834314"},{"1":"874","2":"2","3":"FALSE","4":"55","5":"Graduate","6":"F","7":"0.891019925"},{"1":"875","2":"2","3":"FALSE","4":"35","5":"HighSchoolOrCollege","6":"B","7":"0.535316197"},{"1":"876","2":"2","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"F","7":"0.289402134"},{"1":"877","2":"2","3":"FALSE","4":"24","5":"Bachelors","6":"J","7":"0.573668238"},{"1":"878","2":"2","3":"FALSE","4":"40","5":"Bachelors","6":"J","7":"0.337456142"},{"1":"879","2":"2","3":"FALSE","4":"53","5":"Bachelors","6":"A","7":"0.353813394"},{"1":"880","2":"2","3":"FALSE","4":"49","5":"Bachelors","6":"J","7":"0.021946709"},{"1":"881","2":"2","3":"FALSE","4":"53","5":"Bachelors","6":"C","7":"0.889292896"},{"1":"882","2":"2","3":"FALSE","4":"44","5":"Graduate","6":"G","7":"0.203893650"},{"1":"883","2":"2","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"A","7":"0.020957045"},{"1":"884","2":"2","3":"FALSE","4":"51","5":"Low","6":"A","7":"0.384062608"},{"1":"885","2":"2","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"E","7":"0.280787048"},{"1":"886","2":"2","3":"FALSE","4":"28","5":"HighSchoolOrCollege","6":"I","7":"0.550077037"},{"1":"887","2":"2","3":"FALSE","4":"22","5":"HighSchoolOrCollege","6":"C","7":"0.983190272"},{"1":"888","2":"2","3":"FALSE","4":"31","5":"Graduate","6":"B","7":"0.643407835"},{"1":"889","2":"2","3":"FALSE","4":"19","5":"Bachelors","6":"A","7":"0.126644557"},{"1":"890","2":"2","3":"FALSE","4":"21","5":"Graduate","6":"G","7":"0.875200368"},{"1":"891","2":"2","3":"FALSE","4":"28","5":"Graduate","6":"G","7":"0.554827306"},{"1":"892","2":"2","3":"FALSE","4":"46","5":"HighSchoolOrCollege","6":"H","7":"0.030227430"},{"1":"893","2":"2","3":"FALSE","4":"46","5":"Graduate","6":"F","7":"0.540411016"},{"1":"894","2":"2","3":"FALSE","4":"44","5":"Bachelors","6":"D","7":"0.550025961"},{"1":"895","2":"2","3":"FALSE","4":"40","5":"Bachelors","6":"A","7":"0.628664697"},{"1":"896","2":"2","3":"FALSE","4":"28","5":"HighSchoolOrCollege","6":"B","7":"0.692154335"},{"1":"897","2":"2","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"B","7":"0.385248792"},{"1":"898","2":"2","3":"FALSE","4":"60","5":"Graduate","6":"J","7":"0.486920328"},{"1":"899","2":"2","3":"FALSE","4":"59","5":"Graduate","6":"B","7":"0.544405537"},{"1":"900","2":"2","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"D","7":"0.893569890"},{"1":"901","2":"2","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"F","7":"0.480241663"},{"1":"902","2":"2","3":"FALSE","4":"27","5":"HighSchoolOrCollege","6":"E","7":"0.063125207"},{"1":"903","2":"2","3":"FALSE","4":"23","5":"Bachelors","6":"G","7":"0.210131243"},{"1":"904","2":"2","3":"FALSE","4":"59","5":"Bachelors","6":"B","7":"0.161994033"},{"1":"905","2":"2","3":"FALSE","4":"50","5":"Bachelors","6":"J","7":"0.533005979"},{"1":"906","2":"2","3":"FALSE","4":"22","5":"Bachelors","6":"E","7":"0.930669564"},{"1":"907","2":"2","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"F","7":"0.632828416"},{"1":"908","2":"2","3":"FALSE","4":"29","5":"Bachelors","6":"I","7":"0.598767089"},{"1":"909","2":"2","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"I","7":"0.014316555"},{"1":"910","2":"2","3":"FALSE","4":"41","5":"Bachelors","6":"D","7":"0.652990074"},{"1":"911","2":"2","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"C","7":"0.303588097"},{"1":"912","2":"2","3":"FALSE","4":"28","5":"Graduate","6":"H","7":"0.933377794"},{"1":"913","2":"2","3":"FALSE","4":"55","5":"Bachelors","6":"J","7":"0.000265000"},{"1":"914","2":"2","3":"FALSE","4":"44","5":"Graduate","6":"D","7":"0.405713393"},{"1":"915","2":"2","3":"FALSE","4":"40","5":"Bachelors","6":"B","7":"0.992351674"},{"1":"916","2":"2","3":"FALSE","4":"38","5":"Bachelors","6":"D","7":"0.784906863"},{"1":"917","2":"2","3":"FALSE","4":"32","5":"Bachelors","6":"G","7":"0.431612119"},{"1":"918","2":"2","3":"FALSE","4":"33","5":"Graduate","6":"A","7":"0.230593991"},{"1":"919","2":"2","3":"FALSE","4":"56","5":"HighSchoolOrCollege","6":"C","7":"0.283020728"},{"1":"920","2":"2","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"J","7":"0.961537170"},{"1":"921","2":"2","3":"FALSE","4":"52","5":"Bachelors","6":"G","7":"0.931029947"},{"1":"922","2":"2","3":"FALSE","4":"55","5":"Bachelors","6":"A","7":"0.046984156"},{"1":"923","2":"2","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"E","7":"0.856337800"},{"1":"924","2":"2","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"H","7":"0.275547256"},{"1":"925","2":"2","3":"FALSE","4":"42","5":"HighSchoolOrCollege","6":"J","7":"0.132602239"},{"1":"926","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"A","7":"0.185717667"},{"1":"927","2":"1","3":"FALSE","4":"58","5":"Bachelors","6":"D","7":"0.093249599"},{"1":"928","2":"1","3":"FALSE","4":"20","5":"Bachelors","6":"G","7":"0.445184451"},{"1":"929","2":"1","3":"FALSE","4":"43","5":"HighSchoolOrCollege","6":"E","7":"0.777990984"},{"1":"930","2":"1","3":"FALSE","4":"41","5":"HighSchoolOrCollege","6":"F","7":"0.203002706"},{"1":"931","2":"1","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"I","7":"0.882266910"},{"1":"932","2":"1","3":"FALSE","4":"23","5":"HighSchoolOrCollege","6":"J","7":"0.522667054"},{"1":"933","2":"1","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"D","7":"0.097293702"},{"1":"934","2":"1","3":"FALSE","4":"42","5":"Graduate","6":"B","7":"0.536881382"},{"1":"935","2":"1","3":"FALSE","4":"42","5":"HighSchoolOrCollege","6":"D","7":"0.441937538"},{"1":"936","2":"1","3":"FALSE","4":"33","5":"Bachelors","6":"F","7":"0.235105787"},{"1":"937","2":"1","3":"FALSE","4":"44","5":"Bachelors","6":"C","7":"0.240105908"},{"1":"938","2":"1","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"F","7":"0.679262409"},{"1":"939","2":"1","3":"FALSE","4":"35","5":"Low","6":"J","7":"0.880292697"},{"1":"940","2":"1","3":"FALSE","4":"34","5":"Bachelors","6":"D","7":"0.807027625"},{"1":"941","2":"1","3":"FALSE","4":"50","5":"Bachelors","6":"J","7":"0.840828509"},{"1":"942","2":"1","3":"FALSE","4":"48","5":"Bachelors","6":"I","7":"0.715480626"},{"1":"943","2":"1","3":"FALSE","4":"50","5":"Bachelors","6":"H","7":"0.449546034"},{"1":"944","2":"1","3":"FALSE","4":"48","5":"Graduate","6":"B","7":"0.660069967"},{"1":"945","2":"1","3":"FALSE","4":"21","5":"Bachelors","6":"A","7":"0.819895146"},{"1":"946","2":"1","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"J","7":"0.010975349"},{"1":"947","2":"1","3":"FALSE","4":"41","5":"HighSchoolOrCollege","6":"J","7":"0.116646459"},{"1":"948","2":"1","3":"FALSE","4":"26","5":"Graduate","6":"E","7":"0.880591759"},{"1":"949","2":"1","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"A","7":"0.380395715"},{"1":"950","2":"1","3":"FALSE","4":"27","5":"Bachelors","6":"H","7":"0.131920315"},{"1":"951","2":"1","3":"FALSE","4":"25","5":"Bachelors","6":"E","7":"0.932155545"},{"1":"952","2":"1","3":"FALSE","4":"27","5":"HighSchoolOrCollege","6":"B","7":"0.148548085"},{"1":"953","2":"1","3":"FALSE","4":"45","5":"Graduate","6":"G","7":"0.846871205"},{"1":"954","2":"1","3":"FALSE","4":"41","5":"Bachelors","6":"F","7":"0.556397418"},{"1":"955","2":"1","3":"FALSE","4":"42","5":"Graduate","6":"A","7":"0.305318637"},{"1":"956","2":"1","3":"FALSE","4":"32","5":"Graduate","6":"F","7":"0.217082066"},{"1":"957","2":"1","3":"FALSE","4":"31","5":"HighSchoolOrCollege","6":"H","7":"0.549042649"},{"1":"958","2":"1","3":"FALSE","4":"33","5":"Bachelors","6":"H","7":"0.301470597"},{"1":"959","2":"1","3":"FALSE","4":"58","5":"HighSchoolOrCollege","6":"F","7":"0.349445327"},{"1":"960","2":"1","3":"FALSE","4":"35","5":"Low","6":"I","7":"0.570251922"},{"1":"961","2":"1","3":"FALSE","4":"21","5":"Graduate","6":"F","7":"0.913080150"},{"1":"962","2":"1","3":"FALSE","4":"45","5":"Bachelors","6":"H","7":"0.890386981"},{"1":"963","2":"1","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"G","7":"0.132914203"},{"1":"964","2":"1","3":"FALSE","4":"50","5":"HighSchoolOrCollege","6":"I","7":"0.455351665"},{"1":"965","2":"1","3":"FALSE","4":"29","5":"HighSchoolOrCollege","6":"E","7":"0.258533986"},{"1":"966","2":"1","3":"FALSE","4":"46","5":"Low","6":"F","7":"0.119913514"},{"1":"967","2":"1","3":"FALSE","4":"33","5":"HighSchoolOrCollege","6":"A","7":"0.950638773"},{"1":"968","2":"1","3":"FALSE","4":"54","5":"HighSchoolOrCollege","6":"J","7":"0.982251017"},{"1":"969","2":"1","3":"FALSE","4":"45","5":"Bachelors","6":"A","7":"0.172802708"},{"1":"970","2":"1","3":"FALSE","4":"53","5":"HighSchoolOrCollege","6":"E","7":"0.129766383"},{"1":"971","2":"1","3":"FALSE","4":"54","5":"HighSchoolOrCollege","6":"G","7":"0.159548434"},{"1":"972","2":"1","3":"FALSE","4":"29","5":"HighSchoolOrCollege","6":"H","7":"0.360847428"},{"1":"973","2":"1","3":"FALSE","4":"20","5":"Bachelors","6":"D","7":"0.274541862"},{"1":"974","2":"1","3":"FALSE","4":"24","5":"Bachelors","6":"C","7":"0.345104613"},{"1":"975","2":"1","3":"FALSE","4":"47","5":"HighSchoolOrCollege","6":"B","7":"0.086367063"},{"1":"976","2":"1","3":"FALSE","4":"26","5":"Bachelors","6":"J","7":"0.077140899"},{"1":"977","2":"1","3":"FALSE","4":"52","5":"Bachelors","6":"E","7":"0.502257508"},{"1":"978","2":"1","3":"FALSE","4":"44","5":"HighSchoolOrCollege","6":"D","7":"0.398379338"},{"1":"979","2":"1","3":"FALSE","4":"30","5":"HighSchoolOrCollege","6":"C","7":"0.357706459"},{"1":"980","2":"1","3":"FALSE","4":"54","5":"HighSchoolOrCollege","6":"H","7":"0.548974082"},{"1":"981","2":"1","3":"FALSE","4":"35","5":"HighSchoolOrCollege","6":"F","7":"0.458594873"},{"1":"982","2":"1","3":"FALSE","4":"53","5":"Bachelors","6":"J","7":"0.098639485"},{"1":"983","2":"1","3":"FALSE","4":"44","5":"Graduate","6":"G","7":"0.218315180"},{"1":"984","2":"1","3":"FALSE","4":"35","5":"Low","6":"I","7":"0.969600048"},{"1":"985","2":"1","3":"FALSE","4":"46","5":"HighSchoolOrCollege","6":"E","7":"0.198499294"},{"1":"986","2":"1","3":"FALSE","4":"57","5":"Bachelors","6":"I","7":"0.301652515"},{"1":"987","2":"1","3":"FALSE","4":"20","5":"Bachelors","6":"B","7":"0.182773504"},{"1":"988","2":"1","3":"FALSE","4":"32","5":"HighSchoolOrCollege","6":"H","7":"0.315707809"},{"1":"989","2":"1","3":"FALSE","4":"57","5":"HighSchoolOrCollege","6":"F","7":"0.659934449"},{"1":"990","2":"1","3":"FALSE","4":"37","5":"HighSchoolOrCollege","6":"E","7":"0.833977506"},{"1":"991","2":"1","3":"FALSE","4":"21","5":"Low","6":"C","7":"0.970492609"},{"1":"992","2":"1","3":"FALSE","4":"48","5":"Bachelors","6":"F","7":"0.280018247"},{"1":"993","2":"1","3":"FALSE","4":"31","5":"Graduate","6":"I","7":"0.905125735"},{"1":"994","2":"1","3":"FALSE","4":"42","5":"HighSchoolOrCollege","6":"J","7":"0.932521377"},{"1":"995","2":"1","3":"FALSE","4":"60","5":"HighSchoolOrCollege","6":"C","7":"0.444802157"},{"1":"996","2":"1","3":"FALSE","4":"55","5":"HighSchoolOrCollege","6":"J","7":"0.572648773"},{"1":"997","2":"1","3":"FALSE","4":"48","5":"Graduate","6":"I","7":"0.128853966"},{"1":"998","2":"1","3":"FALSE","4":"53","5":"Bachelors","6":"H","7":"0.335018383"},{"1":"999","2":"1","3":"FALSE","4":"48","5":"Bachelors","6":"F","7":"0.254432893"},{"1":"1000","2":"1","3":"FALSE","4":"56","5":"Graduate","6":"B","7":"0.983012498"},{"1":"1001","2":"1","3":"FALSE","4":"49","5":"Graduate","6":"C","7":"0.043433461"},{"1":"1002","2":"1","3":"FALSE","4":"51","5":"HighSchoolOrCollege","6":"G","7":"0.323610205"},{"1":"1003","2":"1","3":"FALSE","4":"48","5":"HighSchoolOrCollege","6":"F","7":"0.336785107"},{"1":"1004","2":"1","3":"FALSE","4":"41","5":"HighSchoolOrCollege","6":"B","7":"0.070626542"},{"1":"1005","2":"1","3":"FALSE","4":"47","5":"Bachelors","6":"F","7":"0.356881322"},{"1":"1006","2":"1","3":"FALSE","4":"19","5":"HighSchoolOrCollege","6":"J","7":"0.639268458"},{"1":"1007","2":"1","3":"FALSE","4":"40","5":"HighSchoolOrCollege","6":"B","7":"0.934347783"},{"1":"1008","2":"1","3":"FALSE","4":"23","5":"Graduate","6":"C","7":"0.163721028"},{"1":"1009","2":"1","3":"FALSE","4":"39","5":"Low","6":"B","7":"0.828330134"},{"1":"1010","2":"1","3":"FALSE","4":"52","5":"HighSchoolOrCollege","6":"D","7":"0.175387990"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<h1 id="data-wrangling">4. Data Wrangling</h1>
+<h2 id="compute-the-frequency-count-of-participants-sort-the-data">4.1
+Compute the frequency count of participants &amp; Sort the data</h2>
+<p>Next, we are going to compute the frequency count of participants by
+<strong>household size</strong>, <strong>education level</strong> and
+<strong>whether having kids</strong>. There are two ways to complete the
+task. The first way is by using the <em>group-by</em> method and the
+second way is by using the <em>count</em> method of
+<strong>dplyr</strong>.</p>
+<h3 id="the-group-by-method">The <em>group-by</em> method</h3>
+<p>In the code chunk below, <em>group_by()</em> of dplyr package is used
+to group the participants by household size, education level and whether
+having kids Then, <em>summarise()</em> of dplyr is used to count
+(i.e. <em>n()</em>) the number of participants.<br />
+Before we can compute the cumulative frequency, we need to sort the
+values. To accomplish this task, the <em>arrange()</em>of
+<strong>dplyr</strong> package is used to sort by descending order.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Frequency count by household size and sort</span>
+<span class='va'>freq_household</span> <span class='op'>&lt;-</span> <span class='va'>participants_data</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>`householdSize`</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>summarise</span><span class='op'>(</span><span class='st'>'participants'</span> <span class='op'>=</span> <span class='fu'>n</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ungroup</span><span class='op'>(</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='fu'>desc</span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_household</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["householdSize"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"2","2":"373"},{"1":"1","2":"337"},{"1":"3","2":"301"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Frequency count by education level and sort</span>
+<span class='va'>freq_education</span> <span class='op'>&lt;-</span> <span class='va'>participants_data</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>`educationLevel`</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>summarise</span><span class='op'>(</span><span class='st'>'participants'</span> <span class='op'>=</span> <span class='fu'>n</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ungroup</span><span class='op'>(</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='fu'>desc</span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_education</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["educationLevel"],"name":[1],"type":["chr"],"align":["left"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"HighSchoolOrCollege","2":"525"},{"1":"Bachelors","2":"232"},{"1":"Graduate","2":"170"},{"1":"Low","2":"84"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Frequency count by whether having kids in the household and sort</span>
+<span class='va'>freq_kids</span> <span class='op'>&lt;-</span> <span class='va'>participants_data</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>`haveKids`</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>summarise</span><span class='op'>(</span><span class='st'>'participants'</span> <span class='op'>=</span> <span class='fu'>n</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ungroup</span><span class='op'>(</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='fu'>desc</span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_kids</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["haveKids"],"name":[1],"type":["lgl"],"align":["right"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"FALSE","2":"710"},{"1":"TRUE","2":"301"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<h3 id="the-count-method">The <em>count</em> method</h3>
+<p>The code chunk below shows the alternative way to derive the
+frequency of participants by household size, education level and whether
+having kids. In this case, <em>count()</em> of <strong>dplyr</strong>
+package is used.</p>
+<p><em>arrange()</em> is also used to sort frequency values by
+descending order.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Frequency count by household size and sort</span>
+<span class='va'>freq_household</span> <span class='op'>&lt;-</span> <span class='va'>participants_data</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>count</span><span class='op'>(</span><span class='va'>`householdSize`</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>rename</span><span class='op'>(</span>participants <span class='op'>=</span> <span class='va'>n</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='fu'>desc</span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_household</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["householdSize"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"2","2":"373"},{"1":"1","2":"337"},{"1":"3","2":"301"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Frequency count by education level and sort</span>
+<span class='va'>freq_education</span> <span class='op'>&lt;-</span> <span class='va'>participants_data</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>count</span><span class='op'>(</span><span class='va'>`educationLevel`</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>rename</span><span class='op'>(</span>participants <span class='op'>=</span> <span class='va'>n</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='fu'>desc</span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_education</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["educationLevel"],"name":[1],"type":["chr"],"align":["left"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"HighSchoolOrCollege","2":"525"},{"1":"Bachelors","2":"232"},{"1":"Graduate","2":"170"},{"1":"Low","2":"84"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Frequency count by whether having kids in the household and sort</span>
+<span class='va'>freq_kids</span> <span class='op'>&lt;-</span> <span class='va'>participants_data</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>count</span><span class='op'>(</span><span class='va'>`haveKids`</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>rename</span><span class='op'>(</span>participants <span class='op'>=</span> <span class='va'>n</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='fu'>desc</span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_kids</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["haveKids"],"name":[1],"type":["lgl"],"align":["right"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"FALSE","2":"710"},{"1":"TRUE","2":"301"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<h2 id="convert-age-values-to-age-groups">4.2 Convert age values to age
+groups</h2>
+<p>Next we are going to convert the age values into age groups of “25
+and below”, “26-35”, “36-45”, “46-55” and “56 and over” and store the
+data with new column <em>ageGroup</em> in a new dataframe.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>participants_data_ag</span> <span class='op'>&lt;-</span> <span class='va'>participants_data</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>ageGroup <span class='op'>=</span> <span class='fu'>case_when</span><span class='op'>(</span>
+    <span class='va'>age</span> <span class='op'>&lt;=</span><span class='fl'>25</span> <span class='op'>~</span> <span class='st'>"25 and below"</span>,
+    <span class='va'>age</span> <span class='op'>&gt;</span> <span class='fl'>25</span> <span class='op'>&amp;</span> <span class='va'>age</span> <span class='op'>&lt;=</span><span class='fl'>35</span> <span class='op'>~</span> <span class='st'>"26-35"</span>,
+    <span class='va'>age</span> <span class='op'>&gt;</span> <span class='fl'>35</span> <span class='op'>&amp;</span> <span class='va'>age</span> <span class='op'>&lt;=</span><span class='fl'>45</span> <span class='op'>~</span> <span class='st'>"36-45"</span>,
+    <span class='va'>age</span> <span class='op'>&gt;</span> <span class='fl'>45</span> <span class='op'>&amp;</span> <span class='va'>age</span> <span class='op'>&lt;=</span><span class='fl'>55</span> <span class='op'>~</span> <span class='st'>"46-55"</span>,
+    <span class='va'>age</span> <span class='op'>&gt;</span> <span class='fl'>55</span> <span class='op'>~</span> <span class='st'>"56 and over"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>age</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>participants_data_ag</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 6 x 7
+  participantId householdSize haveKids educationLevel    interestGroup
+          &lt;dbl&gt;         &lt;dbl&gt; &lt;lgl&gt;    &lt;chr&gt;             &lt;chr&gt;        
+1             0             3 TRUE     HighSchoolOrColl~ H            
+2             1             3 TRUE     HighSchoolOrColl~ B            
+3             2             3 TRUE     HighSchoolOrColl~ A            
+4             3             3 TRUE     HighSchoolOrColl~ I            
+5             4             3 TRUE     Bachelors         H            
+6             5             3 TRUE     HighSchoolOrColl~ D            
+# ... with 2 more variables: joviality &lt;dbl&gt;, ageGroup &lt;chr&gt;</code></pre>
+</div>
+<p>Similarly to previous steps, we would like to know the frequency
+count of participants by age group.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Frequency count by age group and sort</span>
+<span class='va'>freq_agegroup</span> <span class='op'>&lt;-</span> <span class='va'>participants_data_ag</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>`ageGroup`</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>summarise</span><span class='op'>(</span><span class='st'>'participants'</span> <span class='op'>=</span> <span class='fu'>n</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ungroup</span><span class='op'>(</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='fu'>desc</span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_agegroup</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["ageGroup"],"name":[1],"type":["chr"],"align":["left"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"46-55","2":"244"},{"1":"26-35","2":"243"},{"1":"36-45","2":"226"},{"1":"25 and below","2":"184"},{"1":"56 and over","2":"114"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<h2 id="compute-the-cumulative-frequency">4.3 Compute the cumulative
+frequency</h2>
+<p>Our next task is to compute the cumulative frequency of participants
+by age groups. This task will be performed by using <em>mutate()</em> of
+<strong>dplyr</strong> package and <em>cumsum()</em> of Base R. The
+cumulative frequency is then divided by the sum of participants to
+obtain the cumulative percentage.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>freq_cum_ag</span> <span class='op'>&lt;-</span> <span class='va'>freq_agegroup</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>cumfreq <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cumsum.html'>cumsum</a></span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>*</span><span class='fl'>100</span><span class='op'>)</span>
+
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_cum_ag</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["ageGroup"],"name":[1],"type":["chr"],"align":["left"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]},{"label":["cumfreq"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"46-55","2":"244","3":"24.13452"},{"1":"26-35","2":"243","3":"48.17013"},{"1":"36-45","2":"226","3":"70.52423"},{"1":"25 and below","2":"184","3":"88.72404"},{"1":"56 and over","2":"114","3":"100.00000"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>freq_cum_hs</span> <span class='op'>&lt;-</span> <span class='va'>freq_household</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>cumfreq <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cumsum.html'>cumsum</a></span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>*</span><span class='fl'>100</span><span class='op'>)</span>
+
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_cum_hs</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["householdSize"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]},{"label":["cumfreq"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"2","2":"373","3":"36.89416"},{"1":"1","2":"337","3":"70.22750"},{"1":"3","2":"301","3":"100.00000"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>freq_cum_ed</span> <span class='op'>&lt;-</span> <span class='va'>freq_education</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>cumfreq <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cumsum.html'>cumsum</a></span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>*</span><span class='fl'>100</span><span class='op'>)</span>
+
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_cum_ed</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["educationLevel"],"name":[1],"type":["chr"],"align":["left"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]},{"label":["cumfreq"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"HighSchoolOrCollege","2":"525","3":"51.92878"},{"1":"Bachelors","2":"232","3":"74.87636"},{"1":"Graduate","2":"170","3":"91.69139"},{"1":"Low","2":"84","3":"100.00000"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>freq_cum_kids</span> <span class='op'>&lt;-</span> <span class='va'>freq_kids</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>cumfreq <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cumsum.html'>cumsum</a></span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>participants</span><span class='op'>)</span><span class='op'>*</span><span class='fl'>100</span><span class='op'>)</span>
+
+<span class='fu'>paged_table</span><span class='op'>(</span><span class='va'>freq_cum_kids</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["haveKids"],"name":[1],"type":["lgl"],"align":["right"]},{"label":["participants"],"name":[2],"type":["int"],"align":["right"]},{"label":["cumfreq"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"FALSE","2":"710","3":"70.2275"},{"1":"TRUE","2":"301","3":"100.0000"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<h1 id="data-visualization">5. Data Visualization</h1>
+<h2 id="create-the-pareto-chart">5.1 Create the Pareto Chart</h2>
+<p>A pareto chart was plotted using <strong>ggplot2</strong> as follows
+for participants by age group:</p>
+<p><em>geom_col()</em> instead of <em>geom_bar()</em> was used to create
+the bar chart as we do not need to modify the data, and want the height
+of the bar to represent the actual counts of participants.</p>
+<p><em>geom_line()</em> and <em>geom_point()</em> was used to add the
+points to represent the cumulative frequency and to connect the points
+with a line.</p>
+<p><em>scale_y_continuous()</em> was used to adjust the interval between
+the grid lines and add a secondary y axes for the cumulative percentage
+of participants. After some trial and error, a coefficient of 0.4 is
+selected i.e. primary y-axis is multiplied by 0.4 to get the secondary y
+axis. The corresponding values of the cumulative frequency also needs to
+be transformed using the coefficient.</p>
+<p><em>geom_hline()</em> was used to add a reference line representing
+80% to show which are the age groups that contribute 80% of the
+participants.</p>
+<p><em>theme()</em> was lastly used to adjust the labels on the
+x-axis.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>coeff</span> <span class='op'>&lt;-</span> <span class='fl'>0.4</span>
+<span class='va'>g1</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span>data<span class='op'>=</span><span class='va'>freq_cum_ag</span>, 
+        <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span><span class='op'>(</span><span class='va'>`ageGroup`</span>, <span class='op'>-</span><span class='va'>participants</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>geom_col</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"light blue"</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Age Group"</span>, title <span class='op'>=</span> <span class='st'>"Pareto Chart of participants by age group"</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>geom_point</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>`cumfreq`</span><span class='op'>/</span><span class='va'>coeff</span><span class='op'>)</span>, colour <span class='op'>=</span> <span class='st'>'orange'</span>, size <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>geom_line</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>`cumfreq`</span><span class='op'>/</span><span class='va'>coeff</span><span class='op'>)</span>, colour <span class='op'>=</span> <span class='st'>'orange'</span>, group <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>80</span><span class='op'>/</span><span class='va'>coeff</span>, colour <span class='op'>=</span> <span class='st'>'dark grey'</span>, linetype <span class='op'>=</span> <span class='st'>'dashed'</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>scale_y_continuous</span><span class='op'>(</span>name <span class='op'>=</span>  <span class='st'>"No. of participants"</span>, breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>1000</span>, <span class='fl'>50</span><span class='op'>)</span>, 
+        sec.axis <span class='op'>=</span> <span class='fu'>sec_axis</span><span class='op'>(</span><span class='op'>~</span><span class='va'>.</span><span class='op'>*</span><span class='va'>coeff</span>, name <span class='op'>=</span> <span class='st'>"Percentage of cumulative sum of participants (%)"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>theme_bw</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+        <span class='fu'>theme</span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>vjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> 
+        <span class='fu'>annotate</span><span class='op'>(</span><span class='st'>"text"</span>, x<span class='op'>=</span><span class='st'>'56 and over'</span>, y <span class='op'>=</span> <span class='fl'>85</span><span class='op'>/</span><span class='va'>coeff</span>, label <span class='op'>=</span> <span class='st'>"80%"</span>, colour <span class='op'>=</span> <span class='st'>"dark grey"</span><span class='op'>)</span>
+<span class='va'>g1</span>
+</code></pre>
+</div>
+<p><img src="TakeHome1_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+</div>
+<p>By performing the similar steps, another pareto chart was plotted for
+participants by education level.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>coeff</span> <span class='op'>&lt;-</span> <span class='fl'>0.2</span>
+<span class='va'>g2</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span>data<span class='op'>=</span><span class='va'>freq_cum_ed</span>, 
+        <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span><span class='op'>(</span><span class='va'>`educationLevel`</span>, <span class='op'>-</span><span class='va'>participants</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>participants</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>geom_col</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"light blue"</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Education Level"</span>, title <span class='op'>=</span> <span class='st'>"Pareto Chart of participants by education level"</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>geom_point</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>`cumfreq`</span><span class='op'>/</span><span class='va'>coeff</span><span class='op'>)</span>, colour <span class='op'>=</span> <span class='st'>'orange'</span>, size <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>geom_line</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>`cumfreq`</span><span class='op'>/</span><span class='va'>coeff</span><span class='op'>)</span>, colour <span class='op'>=</span> <span class='st'>'orange'</span>, group <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>80</span><span class='op'>/</span><span class='va'>coeff</span>, colour <span class='op'>=</span> <span class='st'>'dark grey'</span>, linetype <span class='op'>=</span> <span class='st'>'dashed'</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>scale_y_continuous</span><span class='op'>(</span>name <span class='op'>=</span>  <span class='st'>"No. of participants"</span>, breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>1000</span>, <span class='fl'>50</span><span class='op'>)</span>, 
+        sec.axis <span class='op'>=</span> <span class='fu'>sec_axis</span><span class='op'>(</span><span class='op'>~</span><span class='va'>.</span><span class='op'>*</span><span class='va'>coeff</span>, name <span class='op'>=</span> <span class='st'>"Percentage of cumulative sum of participants (%)"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+        <span class='fu'>theme_bw</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+        <span class='fu'>theme</span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>vjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> 
+        <span class='fu'>annotate</span><span class='op'>(</span><span class='st'>"text"</span>, x<span class='op'>=</span><span class='st'>'Low'</span>, y <span class='op'>=</span> <span class='fl'>85</span><span class='op'>/</span><span class='va'>coeff</span>, label <span class='op'>=</span> <span class='st'>"80%"</span>, colour <span class='op'>=</span> <span class='st'>"dark grey"</span><span class='op'>)</span>
+<span class='va'>g2</span>
+</code></pre>
+</div>
+<p><img src="TakeHome1_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
+<h3 id="insights-from-visualization">Insights from visualization</h3>
+<p>From the pareto chart, we can tell that age group distribution is
+relatively even across most of the age groups, except for senior
+residents. The no. of participants &gt;56-year old is much smaller than
+the other groups. We have also noticed that there’re no participants
+aged &lt;18 or &gt;60.</p>
+<p>In terms of education level, half (51.9%) of the participants were
+graduated from high school or college.</p>
+<h2 id="create-the-household-distribution-pyramid">5.2 Create the
+Household Distribution Pyramid</h2>
+<p>For the household distribution pyramid, we would like to show the
+distribution of household size by participant’s age group and whether
+they have kids.</p>
+<p>So we need the household size values of one group of participants
+(i.e. have kids) to appear on the left side of the chart, and the other
+(i.e. no kids) to go on the right. To achieve this, the household size
+values need to be transformed to negative values for participants with
+kids. <em>mutate()</em> function of <strong>dplyr</strong> package is
+used to transform to negative value.</p>
+<p>Next, we bind the new dataset containing negative values with the
+original dataset using <em>rbind()</em> function in Base R.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>participants_data_ag_haveKids</span> <span class='op'>&lt;-</span> <span class='va'>participants_data_ag</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`haveKids`</span> <span class='op'>==</span>  <span class='cn'>TRUE</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>mutate</span> <span class='op'>(</span>householdSize <span class='op'>=</span> <span class='op'>-</span><span class='va'>householdSize</span><span class='op'>)</span>
+
+
+<span class='va'>participants_data_ag_noKids</span> <span class='op'>&lt;-</span><span class='va'>participants_data_ag</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`haveKids`</span> <span class='op'>==</span>  <span class='cn'>FALSE</span><span class='op'>)</span>
+
+<span class='va'>participants_data_ag_byKids</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>participants_data_ag_haveKids</span>, <span class='va'>participants_data_ag_noKids</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><em>geom_bar()</em> of <strong>ggplot2</strong> is used to plot the
+bar chart, and <em>coord_flip()</em> is used to flip the x and y axis to
+form the pyramid.</p>
+<p>The scale of the x axis is also required to reformat to positive
+values on the left side. <em>seq()</em> in Base R is used to sequence
+the axis with each interval having a length of 500, and the labels of
+the x-axis to range from 0 to 250 on both sides.</p>
+<p>The final chart after formatting is shown below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>participants_data_ag_byKids</span>, <span class='fu'>aes</span> <span class='op'>(</span>x <span class='op'>=</span> <span class='va'>ageGroup</span>, y <span class='op'>=</span> <span class='va'>householdSize</span> , fill <span class='op'>=</span> <span class='va'>haveKids</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_bar</span><span class='op'>(</span>stat <span class='op'>=</span> <span class='st'>"identity"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>scale_y_continuous</span><span class='op'>(</span>breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>250</span>, <span class='fl'>250</span>, <span class='fl'>50</span><span class='op'>)</span>, 
+                     labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>250</span>, <span class='fl'>0</span>, <span class='op'>-</span><span class='fl'>50</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>50</span>, <span class='fl'>250</span>, <span class='fl'>50</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>, 
+                     name <span class='op'>=</span> <span class='st'>"Household Size"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Age Group"</span>, title <span class='op'>=</span> <span class='st'>"Household size by age groups and whether have kids"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme_bw</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="TakeHome1_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
+</div>
+<h3 id="insights-from-visualization-1">Insights from visualization</h3>
+<p>From the bar chart, we notice that the total household size for
+participants with kids is even smaller than the total household size for
+participants without kids, across all age groups, which could be due to
+the large proportion (70.2%) of participants having no kids.</p>
+<h2 id="create-boxplot">5.3 Create Boxplot</h2>
+<p><em>geom_boxplot()</em> from <strong>ggplot2</strong> is used to
+create the boxplot. By using <em>geom_point()</em> function, we add in
+mean value points and adjust the color and size.</p>
+<p><em>facet_grid()</em> function helps to form a matrix of panels. Here
+we create the boxplot of participant’s joviality by age group in 2
+panels of whether the participant has kids.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span>data<span class='op'>=</span><span class='va'>participants_data_ag</span>, <span class='fu'>aes</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>joviality</span>, x<span class='op'>=</span> <span class='va'>ageGroup</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_boxplot</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_point</span><span class='op'>(</span>stat<span class='op'>=</span><span class='st'>"summary"</span>,
+             fun.y<span class='op'>=</span><span class='st'>"mean"</span>,
+             colour <span class='op'>=</span><span class='st'>"orange"</span>,
+             size <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>facet_grid</span><span class='op'>(</span><span class='va'>haveKids</span> <span class='op'>~</span><span class='va'>.</span>, labeller <span class='op'>=</span> <span class='va'>label_both</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Age Group"</span>, y <span class='op'>=</span> <span class='st'>"Joviality"</span>, title <span class='op'>=</span> <span class='st'>"Boxplot for joviality by age groups and whether have kids"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme_bw</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="TakeHome1_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
+</div>
+<h3 id="insights-from-visualization-2">Insights from visualization</h3>
+<p>From the boxplots, we can tell for participants without kids, age
+group 26-35 has higher overall happiness level, whereas for participants
+with kids, age group 36-45 has higher overall happiness level.</p>
+<h2 id="create-split-violin-plot">5.4 Create split violin plot</h2>
+<p>Next we are going to use <em>geom_split_violin()</em> of
+<strong>introdataviz</strong> package to create split violin plot for
+joviality of participants by age groups and whether they have kids.</p>
+<p>Below code chunk is used to install
+<strong>introdataviz</strong>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org/reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"psyteachr/introdataviz"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Code chunk below is used to create the split violin plot. The plot is
+also added with boxplot using <em>geom_boxplot()</em> and data points
+for mean value using <em>stat_summary()</em>.
+<em>scale_y_continuous()</em> is used to adjust the scale of y-axis.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>participants_data_ag</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>ageGroup</span>, y <span class='op'>=</span> <span class='va'>joviality</span>, fill <span class='op'>=</span> <span class='va'>haveKids</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>introdataviz</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/introdataviz/man/geom_split_violin.html'>geom_split_violin</a></span><span class='op'>(</span>alpha <span class='op'>=</span> <span class='fl'>.4</span>, trim <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_boxplot</span><span class='op'>(</span>width <span class='op'>=</span> <span class='fl'>.2</span>, alpha <span class='op'>=</span> <span class='fl'>.6</span>, fatten <span class='op'>=</span> <span class='cn'>NULL</span>, show.legend <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>stat_summary</span><span class='op'>(</span>fun.data <span class='op'>=</span> <span class='st'>"mean_se"</span>, geom <span class='op'>=</span> <span class='st'>"pointrange"</span>, show.legend <span class='op'>=</span> <span class='cn'>F</span>, 
+               position <span class='op'>=</span> <span class='fu'>position_dodge</span><span class='op'>(</span><span class='fl'>.175</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>scale_y_continuous</span><span class='op'>(</span>breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>1.2</span>, <span class='fl'>0.1</span><span class='op'>)</span>, 
+                     limits <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>1.2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>scale_fill_brewer</span><span class='op'>(</span>palette <span class='op'>=</span> <span class='st'>"Dark2"</span>, name <span class='op'>=</span> <span class='st'>"Have Kids"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Age Group"</span>, y <span class='op'>=</span> <span class='st'>"Joviality"</span>, title <span class='op'>=</span> <span class='st'>"Split violin plots for joviality by age groups and whether have kids"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme_bw</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="TakeHome1_files/figure-html5/unnamed-chunk-14-1.png" width="624" /></p>
+</div>
+<h3 id="insights-from-visualization-3">Insights from visualization</h3>
+<p>From the violin plots, we can see age group 46-55 has relatively
+lower happiness level as compared to other age groups, regardless
+whether they have kids or not in the household. Inside age group 36-45,
+those with kids seem to be happier than those without kids.</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

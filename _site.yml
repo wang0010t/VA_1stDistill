@@ -28,4 +28,6 @@ navbar:
         href: "TakeHome4.html"
       - text: "Take-home Exercise 5"
         href: "TakeHome5.html"
+      - text: "Take-home Exercise 6"
+        href: "TakeHome6.html"
 output: distill::distill_article

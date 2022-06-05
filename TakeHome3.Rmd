@@ -58,7 +58,7 @@ The code chunk below imports *CheckinJournal.csv* into R environment by using *r
 
 ```{r}
 
-checkin_journal <- read_csv("data/CheckinJournal.csv")
+checkin_journal <- read_csv("data/Journal/CheckinJournal.csv")
 
 paged_table(checkin_journal)
 

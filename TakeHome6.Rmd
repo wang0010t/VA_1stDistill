@@ -271,7 +271,7 @@ We will use the *group_edge_betweenness()* algorithm imbedded in **igraph** for 
 
 Below code chunk performs the community detection for 2022 Mar. 118 communities have been detected. 
 
-```{r, fig.height=8, fig.width=12}
+```{r, fig.height=8, fig.width=12, eval=FALSE}
 g <- sngraph_before %>%
   mutate(community = as.factor(group_edge_betweenness(weights = Weight))) %>%
   ggraph(layout = "fr") + 
@@ -284,12 +284,12 @@ g <- sngraph_before %>%
 g + theme()
 
 ```
-
+<img src="img/THE6-1.png">
 
 
 Below code chunk performs the community detection for 2023 Mar. 94 communities have been detected. 
 
-```{r, fig.height=8, fig.width=12}
+```{r, fig.height=8, fig.width=12, eval=FALSE}
 g <- sngraph_after %>%
   mutate(community = as.factor(group_edge_betweenness(weights = Weight, directed = TRUE))) %>%
   ggraph(layout = "fr") + 
@@ -302,6 +302,8 @@ g <- sngraph_after %>%
 g + theme()
 
 ```
+
+<img src="img/THE6-2.png">
 
 From the graphs above, we are not really able to identify clear and obvious community groups in the social network for both time periods due to the large no. of communities detected.
 
